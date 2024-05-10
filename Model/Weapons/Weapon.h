@@ -11,8 +11,8 @@ class Weapon : public GameObject{
     AllyOrEnemy allyOrEnemy_;
 
 public:
-    Weapon(sf::Vector2f pos, float shootCD, AllyOrEnemy allyOrEnemy):
-    GameObject(pos), SHOOTING_COOLDOWN(shootCD),
+    Weapon(sf::Vector2f pos, sf::Vector2f size, float shootCD, AllyOrEnemy allyOrEnemy):
+    GameObject(pos, size), SHOOTING_COOLDOWN(shootCD),
     timeFromLastShot_(shootCD), allyOrEnemy_(allyOrEnemy) {};
 
     float getShootingCooldown() const;

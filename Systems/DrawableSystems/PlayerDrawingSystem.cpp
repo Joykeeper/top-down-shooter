@@ -6,8 +6,9 @@
 #include "../../GameController.h"
 
 void PlayerDrawingSystem::draw(sf::RenderWindow &window) const {
-    sf::RectangleShape rectangle(sf::Vector2f(50, 50));
-    auto playerPos = GameController::getInstance()->player.getPos();
-    rectangle.setPosition(playerPos);
+    auto player = GameController::getInstance()->player;
+
+    sf::RectangleShape rectangle(player.getSize());
+    rectangle.setPosition(player.getPos() - player.getSize()/2.f);
     window.draw(rectangle);
 }

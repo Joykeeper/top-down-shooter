@@ -6,13 +6,12 @@
 #include "../../GameController.h"
 
 void ProjectileDrawingSystem::draw(sf::RenderWindow &window) const {
-    sf::CircleShape shape(20);
-    shape.setFillColor(sf::Color::Green);
-
     auto projectiles = GameController::getInstance()->projectileHandler.getItems();
 
     for(auto proj: projectiles){
-        shape.setPosition(proj->getPos());
+        sf::CircleShape shape(proj->getSize().x/2.f);
+        shape.setFillColor(sf::Color::Green);
+        shape.setPosition(proj->getPos()-proj->getSize()/2.f);
         window.draw(shape);
     }
 }

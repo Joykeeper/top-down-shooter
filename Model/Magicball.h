@@ -13,7 +13,7 @@ class Magicball : public GameObject{
 
 public:
     Magicball(sf::Vector2f startPos, sf::Vector2f dir, AllyOrEnemy type) :
-            GameObject(startPos),  speed(1000), lifeTime(3), direction(dir), damage(1),
+            GameObject(startPos, {40, 40}),  speed(1000), lifeTime(3), direction(dir), damage(1),
             allyOrEnemy(type){};
 
     sf::Vector2f getDirection();

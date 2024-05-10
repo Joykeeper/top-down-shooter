@@ -9,6 +9,7 @@
 void InputHandlingSystem::update(sf::Time deltaTime) const{
     sf::Vector2f velocity = {};
 
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
         velocity += sf::Vector2f (0, -1);
     }
@@ -36,12 +37,13 @@ void InputHandlingSystem::update(sf::Time deltaTime) const{
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) and GameController::getInstance()->enemyHandler.getItems().empty()){
         auto* enemy = new Enemy(sf::Vector2f(100,100));
-        enemy->setWeapon(*new Weapon(enemy->getPos(),
-                                     0.25, AllyOrEnemy::ENEMY));
+        enemy->setWeapon(*new Pistol(enemy->getPos(), AllyOrEnemy::ENEMY));
         GameController::getInstance()->enemyHandler.add(*enemy);
     }
 
     Player& player = GameController::getInstance()->player;
+
+
     player.move(Utils::normalizeVector(velocity)*player.getMoveSpeed()*deltaTime.asSeconds());
 
 }

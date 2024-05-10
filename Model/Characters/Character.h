@@ -9,8 +9,8 @@ class Character : public GameObject{
     Weapon* weapon;
     AllyOrEnemy allyOrEnemy;
 public:
-    Character(sf::Vector2f pos, int health, float moveSpeed,AllyOrEnemy aRE, Weapon* weapon = nullptr):
-    GameObject(pos), health_(health), moveSpeed_(moveSpeed),
+    Character(sf::Vector2f pos, sf::Vector2f size, int health, float moveSpeed,AllyOrEnemy aRE, Weapon* weapon = nullptr):
+    GameObject(pos, size), health_(health), moveSpeed_(moveSpeed),
                        allyOrEnemy(aRE), weapon(weapon){};
 
     float getMoveSpeed() const;

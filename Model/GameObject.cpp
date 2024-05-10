@@ -11,3 +11,7 @@ sf::Vector2f GameObject::getPos() const{
 void GameObject::move(sf::Vector2f vec) {
     this->position_ += vec;
 }
+
+sf::Vector2f GameObject::getSize() const {
+    return this->size_;
+}

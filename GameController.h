@@ -19,16 +19,20 @@
 #include "Model/Room.h"
 #include "Systems/UpdatableSystems/RoomHandlingSystem.h"
 #include "Systems/DrawableSystems/RoomDrawingSystem.h"
+#include "Model/Interactables/Interactable.h"
+#include "Model/Interactables/HealingSalve.h"
+#include "Systems/UpdatableSystems/InteractableHandlingSystem.h"
+#include "Systems/DrawableSystems/InteractableDrawingSystem.h"
 
 class GameController {
 public:
     static GameController* instance;
 
     Player player;
-    Enemy enemy;
 
     Handler<Enemy> enemyHandler;
     Handler<Magicball> projectileHandler;
+    Handler<Interactable> interactableHandler;
 
     Room* activeRoom;
 
@@ -38,9 +42,11 @@ public:
     sf::RenderWindow* window;
 
     GameController(): activeRoom(new Room()) {
-        player.setWeapon(*new Weapon(player.getPos() + sf::Vector2f(25, 25),0.25, AllyOrEnemy::ALLY));
+        player.setWeapon(*new Weapon(player.getPos(), sf::Vector2f(10, 10),0.25, AllyOrEnemy::ALLY));
+        interactableHandler.add(*new HealingSalve(sf::Vector2f(-100, -100), 2));
         this->addUpdatableSystem(*new InputHandlingSystem());
         this->addUpdatableSystem(*new RoomHandlingSystem());
+        this->addUpdatableSystem(*new InteractableHandlingSystem());
         this->addUpdatableSystem(*new WeaponHandlingSystem());
         this->addUpdatableSystem(*new EnemyHandlingSystem());
         this->addUpdatableSystem(*new ProjectileHandlingSystem());
@@ -51,6 +57,7 @@ public:
         this->addDrawableSystem(*new PlayerDrawingSystem());
         this->addDrawableSystem(*new EnemyDrawingSystem());
         this->addDrawableSystem(*new WeaponDrawingSystem());
+        this->addDrawableSystem(*new InteractableDrawingSystem());
 
         this->addDrawableSystem(*new ProjectileDrawingSystem());
     };

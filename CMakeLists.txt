@@ -63,6 +63,16 @@ add_executable(MagicianFest main.cpp
         Model/Weapons/Pistol.h
         Model/Characters/Enemies/PistolEnemy.cpp
         Model/Characters/Enemies/PistolEnemy.h
+        Model/Interactables/Interactable.cpp
+        Model/Interactables/Interactable.h
+        Model/Interactables/WeaponPickable.cpp
+        Model/Interactables/WeaponPickable.h
+        Systems/UpdatableSystems/InteractableHandlingSystem.cpp
+        Systems/UpdatableSystems/InteractableHandlingSystem.h
+        Model/Interactables/HealingSalve.cpp
+        Model/Interactables/HealingSalve.h
+        Systems/DrawableSystems/InteractableDrawingSystem.cpp
+        Systems/DrawableSystems/InteractableDrawingSystem.h
 )
 
 target_link_libraries(MagicianFest sfml-graphics)

@@ -5,6 +5,7 @@
 #include <iostream>
 #include "ProjectileHandlingSystem.h"
 #include "../../GameController.h"
+#include "../../Utils.h"
 
 auto moveProjectiles(std::vector<Magicball*> projectiles, sf::Time dt) -> void;
 auto checkIfHit(std::vector<Magicball*> projectiles, sf::Time dt) -> void;
@@ -35,8 +36,9 @@ auto checkIfHit(std::vector<Magicball*> projectiles, sf::Time dt) -> void{
         if (proj->getAllyOrEnemy() == AllyOrEnemy::ALLY){
             auto enemies = GameController::getInstance()->enemyHandler.getItems();
             for(auto& enemy: enemies){
-                if( enemy->getPos().x <= proj->getPos().x and proj->getPos().x <= enemy->getPos().x + 75 and
-                        enemy->getPos().y <= proj->getPos().y and proj->getPos().y <= enemy->getPos().y + 75){
+//                ( enemy->getPos().x <= proj->getPos().x and proj->getPos().x <= enemy->getPos().x + 75 and
+//                  enemy->getPos().y <= proj->getPos().y and proj->getPos().y <= enemy->getPos().y + 75)
+                if(Utils::objectsCollide(*proj, *enemy)){
                         enemy->setHealth(enemy->getHealth()-proj->getDamage());
                         std::cout << enemy->getHealth() << "ehealth\n";
                         removedProjectiles.push_back(proj);
@@ -45,9 +47,7 @@ auto checkIfHit(std::vector<Magicball*> projectiles, sf::Time dt) -> void{
             }
         } else {
             auto player = &GameController::getInstance()->player;
-            auto playerPos = player->getPos();
-            if( playerPos.x <= proj->getPos().x and proj->getPos().x <= playerPos.x + 50 and
-            playerPos.y <= proj->getPos().y and proj->getPos().y <= playerPos.y + 50){
+            if( Utils::objectsCollide(*proj, *player)){
                 player->setHealth(player->getHealth()-proj->getDamage());
                 removedProjectiles.push_back(proj);
             }

@@ -5,6 +5,6 @@
 class Player : public Character{
 
 public:
-    Player() : Character(sf::Vector2f(10, 10), 10, 300, AllyOrEnemy::ALLY){};
+    Player() : Character(sf::Vector2f(10, 10), sf::Vector2f(60, 60), 10, 300, AllyOrEnemy::ALLY){};
 };
 

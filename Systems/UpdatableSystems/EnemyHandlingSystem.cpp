@@ -72,10 +72,6 @@ void shootAtPlayer(auto enemies){
 void checkIfPlayerInRadius(auto enemies){
     auto playerPos = GameController::getInstance()->player.getPos();
     for (auto& enemy: enemies){
-        std::cout << sqrt((playerPos.x - enemy->getPos().x)*(playerPos.x - enemy->getPos().x) +
-                          (playerPos.y - enemy->getPos().y)*(playerPos.y - enemy->getPos().y)) << "sqrt\n";
-        std::cout << enemy->getShootingRadius();
-        std::cout << " here\n";
         if (sqrt((playerPos.x - enemy->getPos().x)*(playerPos.x - enemy->getPos().x) +
             (playerPos.y - enemy->getPos().y)*(playerPos.y - enemy->getPos().y)) <= enemy->getShootingRadius()){
                 enemy->setPlayerInRadius(true);
