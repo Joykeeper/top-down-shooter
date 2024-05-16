@@ -65,8 +65,6 @@ add_executable(MagicianFest main.cpp
         Model/Characters/Enemies/PistolEnemy.h
         Model/Interactables/Interactable.cpp
         Model/Interactables/Interactable.h
-        Model/Interactables/WeaponPickable.cpp
-        Model/Interactables/WeaponPickable.h
         Systems/UpdatableSystems/InteractableHandlingSystem.cpp
         Systems/UpdatableSystems/InteractableHandlingSystem.h
         Model/Interactables/HealingSalve.cpp
