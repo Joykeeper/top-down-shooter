@@ -359,6 +359,15 @@ FREETYPE_LIBRARY:FILEPATH=D:/Learning/University/II semester/PJC/MagicianFest/cm
 GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
 //Value Computed by CMake
+MagicFest_BINARY_DIR:STATIC=D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug
+
+//Value Computed by CMake
+MagicFest_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+MagicFest_SOURCE_DIR:STATIC=D:/Learning/University/II semester/PJC/MagicianFest
+
+//Value Computed by CMake
 MagicianFest_BINARY_DIR:STATIC=D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug
 
 //Value Computed by CMake

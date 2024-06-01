@@ -12,7 +12,8 @@ class Room {
     bool finished;
 
 public:
-    Room(sf::Vector2f pos=sf::Vector2f(50, 50)):
+    static sf::Vector2i ROOM_SIZE;
+    Room(sf::Vector2f pos={(float )ROOM_SIZE.x, (float )ROOM_SIZE.y}):
     position_(pos), size_(sf::Vector2f(800, 600)), currentWave_(0),
     finished(false), active(false){
         for (auto i = 0; i < 3; i++){

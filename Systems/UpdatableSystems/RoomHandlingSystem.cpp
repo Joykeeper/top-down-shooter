@@ -14,9 +14,7 @@ void RoomHandlingSystem::update(sf::Time) const {
         activeRoom->nextWave();
 
         auto enemies = activeRoom->provideEnemies();
-        std::cout << enemies.size() << "esize\n";
 
         GameController::getInstance()->enemyHandler.addAll(enemies);
-        std::cout << GameController::getInstance()->enemyHandler.getItems().size() << "size\n";
     }
 }

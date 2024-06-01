@@ -4,6 +4,8 @@
 
 #include "Room.h"
 
+sf::Vector2i Room::ROOM_SIZE = sf::Vector2i (1000, 1000);
+
 sf::Vector2f Room::getPos() {
     return this->position_;
 }

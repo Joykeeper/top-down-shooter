@@ -141,7 +141,7 @@ set_target_properties(sfml-audio PROPERTIES
 set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-system PROPERTIES
   IMPORTED_IMPLIB_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/libsfml-system-d.a"
-  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/sfml-system-d-2.dll"
+  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/bin/sfml-system-d-2.dll"
   )
 
 # Import target "sfml-main" for configuration "Debug"
@@ -155,28 +155,28 @@ set_target_properties(sfml-main PROPERTIES
 set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-window PROPERTIES
   IMPORTED_IMPLIB_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/libsfml-window-d.a"
-  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/sfml-window-d-2.dll"
+  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/bin/sfml-window-d-2.dll"
   )
 
 # Import target "sfml-network" for configuration "Debug"
 set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-network PROPERTIES
   IMPORTED_IMPLIB_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/libsfml-network-d.a"
-  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/sfml-network-d-2.dll"
+  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/bin/sfml-network-d-2.dll"
   )
 
 # Import target "sfml-graphics" for configuration "Debug"
 set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-graphics PROPERTIES
   IMPORTED_IMPLIB_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/libsfml-graphics-d.a"
-  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/sfml-graphics-d-2.dll"
+  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/bin/sfml-graphics-d-2.dll"
   )
 
 # Import target "sfml-audio" for configuration "Debug"
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_IMPLIB_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/libsfml-audio-d.a"
-  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/lib/sfml-audio-d-2.dll"
+  IMPORTED_LOCATION_DEBUG "D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/bin/sfml-audio-d-2.dll"
   )
 
 # This file does not depend on other imported targets which have

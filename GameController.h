@@ -15,6 +15,7 @@
 #include "Systems/DrawableSystems/WeaponDrawingSystem.h"
 #include "Systems/UpdatableSystems/EnemyHandlingSystem.h"
 #include "Systems/UpdatableSystems/WeaponHandlingSystem.h"
+#include "Model/OldHandler.h"
 #include "Model/Handler.h"
 #include "Model/Room.h"
 #include "Systems/UpdatableSystems/RoomHandlingSystem.h"
@@ -23,6 +24,10 @@
 #include "Model/Interactables/HealingSalve.h"
 #include "Systems/UpdatableSystems/InteractableHandlingSystem.h"
 #include "Systems/DrawableSystems/InteractableDrawingSystem.h"
+#include "Systems/UpdatableSystems/EffectPuttingSystem.h"
+#include "Systems/UpdatableSystems/EffectRemovingSystem.h"
+#include "Model/Interactables/ShieldPotion.h"
+#include "Model/Level.h"
 
 class GameController {
 public:
@@ -30,11 +35,12 @@ public:
 
     Player player;
 
-    Handler<Enemy> enemyHandler;
+    OldHandler<Enemy> enemyHandler;
     Handler<Magicball> projectileHandler;
-    Handler<Interactable> interactableHandler;
+    OldHandler<Interactable> interactableHandler;
 
     Room* activeRoom;
+    Level* currentLevel;
 
     std::vector<DrawableSystem*> drawableSystems;
     std::vector<UpdatableSystem*> updatableSystems;
@@ -42,24 +48,29 @@ public:
     sf::RenderWindow* window;
 
     GameController(): activeRoom(new Room()) {
-        player.setWeapon(*new Weapon(player.getPos(), sf::Vector2f(10, 10),0.25, AllyOrEnemy::ALLY));
-        interactableHandler.add(*new HealingSalve(sf::Vector2f(-100, -100), 2));
-        this->addUpdatableSystem(*new InputHandlingSystem());
-        this->addUpdatableSystem(*new RoomHandlingSystem());
-        this->addUpdatableSystem(*new InteractableHandlingSystem());
-        this->addUpdatableSystem(*new WeaponHandlingSystem());
-        this->addUpdatableSystem(*new EnemyHandlingSystem());
-        this->addUpdatableSystem(*new ProjectileHandlingSystem());
+        player.setWeapon(std::make_unique<Weapon>(player.getPos(), sf::Vector2f(10, 10),0, AllyOrEnemy::ALLY));
+        interactableHandler.add(new HealingSalve(sf::Vector2f(-100, -100), 2));
+        interactableHandler.add(new ShieldPotion(sf::Vector2f(-25, -100), 5));
+        interactableHandler.add(new ShieldPotion(sf::Vector2f(0, -100), 5));
+        this->addUpdatableSystem(new EffectPuttingSystem());
+        this->addUpdatableSystem(new InputHandlingSystem());
+        this->addUpdatableSystem(new RoomHandlingSystem());
+        this->addUpdatableSystem(new InteractableHandlingSystem());
+        this->addUpdatableSystem(new WeaponHandlingSystem());
+        this->addUpdatableSystem(new EnemyHandlingSystem());
+        this->addUpdatableSystem(new ProjectileHandlingSystem());
+        this->addUpdatableSystem(new EffectRemovingSystem());
 
-        this->addDrawableSystem(*new CameraMovingSystem());
-        this->addDrawableSystem(*new FieldDrawingSystem());
-        this->addDrawableSystem(*new RoomDrawingSystem());
-        this->addDrawableSystem(*new PlayerDrawingSystem());
-        this->addDrawableSystem(*new EnemyDrawingSystem());
-        this->addDrawableSystem(*new WeaponDrawingSystem());
-        this->addDrawableSystem(*new InteractableDrawingSystem());
 
-        this->addDrawableSystem(*new ProjectileDrawingSystem());
+        this->addDrawableSystem(new CameraMovingSystem());
+        this->addDrawableSystem(new FieldDrawingSystem());
+        //this->addDrawableSystem(new RoomDrawingSystem());
+        this->addDrawableSystem(new PlayerDrawingSystem());
+        this->addDrawableSystem(new EnemyDrawingSystem());
+        this->addDrawableSystem(new WeaponDrawingSystem());
+        this->addDrawableSystem(new InteractableDrawingSystem());
+
+        this->addDrawableSystem(new ProjectileDrawingSystem());
     };
 
     static GameController* getInstance(){
@@ -76,8 +87,8 @@ public:
     void runDrawableSystems(sf::RenderWindow&);
     void runUpdatableSystems(sf::Time);
 
-    void addDrawableSystem(DrawableSystem&);
-    void addUpdatableSystem(UpdatableSystem&);
+    void addDrawableSystem(DrawableSystem*);
+    void addUpdatableSystem(UpdatableSystem*);
 
     std::vector<Character*> getCharacters() const;
 

@@ -7,8 +7,9 @@
 
 void GameController::runUpdatableSystems(sf::Time deltaTime) {
     for(auto system: this->updatableSystems) system->update(deltaTime);
-    std::cout << this->projectileHandler.getItems().size() << "\n";
-
+    std::cout <<
+    player.getShieldPoints() << " - shield, " << player.getHealth() << " - health\n";
+    std::cout << player.getWeapon().getTimeFromLastShot() << " - time from last shot";
 }
 
 void GameController::runDrawableSystems(sf::RenderWindow& window) {
@@ -17,11 +18,11 @@ void GameController::runDrawableSystems(sf::RenderWindow& window) {
 
 GameController* GameController::instance = nullptr;
 
-void GameController::addDrawableSystem(DrawableSystem& system) {
-    this->drawableSystems.push_back(&system);
+void GameController::addDrawableSystem(DrawableSystem* system) {
+    this->drawableSystems.push_back(system);
 }
-void GameController::addUpdatableSystem(UpdatableSystem& system) {
-    this->updatableSystems.push_back(&system);
+void GameController::addUpdatableSystem(UpdatableSystem* system) {
+    this->updatableSystems.push_back(system);
 }
 
 void GameController::setCamera(sf::View& cam) {

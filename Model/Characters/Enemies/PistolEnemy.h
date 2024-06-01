@@ -6,6 +6,6 @@
 
 class PistolEnemy : public Enemy{
 public:
-    PistolEnemy(sf::Vector2f pos={}): Enemy(pos, 300, 100, new Pistol(pos, AllyOrEnemy::ENEMY)){};
+    PistolEnemy(sf::Vector2f pos={}): Enemy(pos, 300, 100, std::make_unique<Pistol>(pos, AllyOrEnemy::ENEMY)){};
 };
 

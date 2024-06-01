@@ -3,6 +3,8 @@ project(MagicianFest)
 
 set(CMAKE_CXX_STANDARD 20)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 include(FetchContent)
 
 FetchContent_Declare(
@@ -52,7 +54,7 @@ add_executable(MagicianFest main.cpp
         Systems/DrawableSystems/WeaponDrawingSystem.cpp
         Systems/DrawableSystems/WeaponDrawingSystem.h
         Model/AllyOrEnemy.h
-        Model/Handler.h
+        Model/OldHandler.h
         Model/Room.cpp
         Model/Room.h
         Systems/UpdatableSystems/RoomHandlingSystem.cpp
@@ -71,7 +73,27 @@ add_executable(MagicianFest main.cpp
         Model/Interactables/HealingSalve.h
         Systems/DrawableSystems/InteractableDrawingSystem.cpp
         Systems/DrawableSystems/InteractableDrawingSystem.h
+        Model/Effects/Effect.cpp
+        Model/Effects/Effect.h
+        Model/Effects/Effect.h
+        Model/Effects/MoveSpeedEffect.cpp
+        Model/Effects/MoveSpeedEffect.h
+        Systems/UpdatableSystems/EffectPuttingSystem.cpp
+        Systems/UpdatableSystems/EffectPuttingSystem.h
+        Systems/UpdatableSystems/EffectRemovingSystem.cpp
+        Systems/UpdatableSystems/EffectRemovingSystem.h
+        Model/Effects/AttackSpeedEffect.cpp
+        Model/Effects/AttackSpeedEffect.h
+        Model/Interactables/ShieldPotion.cpp
+        Model/Interactables/ShieldPotion.h
+        Model/Level.h
+        Model/Level.cpp
+        Model/Characters/CharacterState.cpp
+        Model/Characters/CharacterState.h
+        Model/Handler.h
 )
 
 target_link_libraries(MagicianFest sfml-graphics)
+
+
 

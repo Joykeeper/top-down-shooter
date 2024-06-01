@@ -17,9 +17,7 @@ void WeaponHandlingSystem::update(sf::Time dt) const {
 void updateWeapons(const std::vector<Character*>& characters, sf::Time dt){
     for(auto character: characters){
         if (character->hasWeapon()){
-            auto weapon = character->getWeapon();
-
-            std::cout << weapon->getPos().x << " " << weapon->getPos().y << "weapon pos \n";
+            auto weapon = &character->getWeapon();
 
             if (weapon->getTimeFromLastShot() < weapon->getShootingCooldown()){
                 weapon->setTimeFromLastShot(weapon->getTimeFromLastShot()+dt.asSeconds());

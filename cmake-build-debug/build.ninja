@@ -238,21 +238,77 @@ build CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/InteractableDrawingSys
   OBJECT_DIR = CMakeFiles\MagicianFest.dir
   OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\DrawableSystems
 
+build CMakeFiles/MagicianFest.dir/Model/Effects/Effect.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Effects/Effect.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Effects\Effect.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Effects
+
+build CMakeFiles/MagicianFest.dir/Model/Effects/MoveSpeedEffect.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Effects/MoveSpeedEffect.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Effects\MoveSpeedEffect.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Effects
+
+build CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectPuttingSystem.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Systems/UpdatableSystems/EffectPuttingSystem.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems\EffectPuttingSystem.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems
+
+build CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectRemovingSystem.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Systems/UpdatableSystems/EffectRemovingSystem.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems\EffectRemovingSystem.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems
+
+build CMakeFiles/MagicianFest.dir/Model/Effects/AttackSpeedEffect.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Effects/AttackSpeedEffect.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Effects\AttackSpeedEffect.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Effects
+
+build CMakeFiles/MagicianFest.dir/Model/Interactables/ShieldPotion.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Interactables/ShieldPotion.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Interactables\ShieldPotion.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Interactables
+
+build CMakeFiles/MagicianFest.dir/Model/Level.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Level.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Level.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model
+
+build CMakeFiles/MagicianFest.dir/Model/Characters/CharacterState.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Characters/CharacterState.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Characters\CharacterState.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Characters
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MagicianFest
 
 
 #############################################
-# Link the executable MagicianFest.exe
+# Link the executable bin\MagicianFest.exe
 
-build MagicianFest.exe: CXX_EXECUTABLE_LINKER__MagicianFest_Debug CMakeFiles/MagicianFest.dir/main.cpp.obj CMakeFiles/MagicianFest.dir/GameController.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Player.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InputHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/PlayerDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/CameraMovingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/FieldDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Magicball.cpp.obj CMakeFiles/MagicianFest.dir/Model/GameObject.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/ProjectileDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/ProjectileHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Enemy.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/EnemyDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EnemyHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Weapon.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Character.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/WeaponHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/WeaponDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Room.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/RoomHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/RoomDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Pistol.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/PistolEnemy.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/Interactable.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InteractableHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/HealingSalve.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/InteractableDrawingSystem.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
+build bin/MagicianFest.exe: CXX_EXECUTABLE_LINKER__MagicianFest_Debug CMakeFiles/MagicianFest.dir/main.cpp.obj CMakeFiles/MagicianFest.dir/GameController.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Player.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InputHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/PlayerDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/CameraMovingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/FieldDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Magicball.cpp.obj CMakeFiles/MagicianFest.dir/Model/GameObject.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/ProjectileDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/ProjectileHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Enemy.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/EnemyDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EnemyHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Weapon.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Character.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/WeaponHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/WeaponDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Room.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/RoomHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/RoomDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Pistol.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/PistolEnemy.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/Interactable.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InteractableHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/HealingSalve.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/InteractableDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/Effect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/MoveSpeedEffect.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectPuttingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectRemovingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/AttackSpeedEffect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/ShieldPotion.cpp.obj CMakeFiles/MagicianFest.dir/Model/Level.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/CharacterState.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || bin/sfml-graphics-d-2.dll bin/sfml-system-d-2.dll bin/sfml-window-d-2.dll
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-d.a  _deps/sfml-build/lib/libsfml-window-d.a  _deps/sfml-build/lib/libsfml-system-d.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\MagicianFest.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = MagicianFest.exe
+  TARGET_FILE = bin\MagicianFest.exe
   TARGET_IMPLIB = libMagicianFest.dll.a
   TARGET_PDB = MagicianFest.exe.dbg
 
@@ -688,16 +744,16 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc
 
 
 #############################################
-# Link the shared library _deps\sfml-build\lib\sfml-system-d-2.dll
+# Link the shared library bin\sfml-system-d-2.dll
 
-build _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/libsfml-system-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-system_Debug _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc.obj
+build bin/sfml-system-d-2.dll _deps/sfml-build/lib/libsfml-system-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-system_Debug _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc.obj
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = -lwinmm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = _deps\sfml-build\lib\sfml-system-d-2.dll
+  TARGET_FILE = bin\sfml-system-d-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-system-d.a
   TARGET_PDB = sfml-system-d-2.dll.dbg
 
@@ -1151,16 +1207,16 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc
 
 
 #############################################
-# Link the shared library _deps\sfml-build\lib\sfml-window-d-2.dll
+# Link the shared library bin\sfml-window-d-2.dll
 
-build _deps/sfml-build/lib/sfml-window-d-2.dll _deps/sfml-build/lib/libsfml-window-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-window_Debug _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc.obj | _deps/sfml-build/lib/libsfml-system-d.a || _deps/sfml-build/lib/sfml-system-d-2.dll
+build bin/sfml-window-d-2.dll _deps/sfml-build/lib/libsfml-window-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-window_Debug _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc.obj | _deps/sfml-build/lib/libsfml-system-d.a || bin/sfml-system-d-2.dll
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-system-d.a  -lwinmm  -lgdi32  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = _deps\sfml-build\lib\sfml-window-d-2.dll
+  TARGET_FILE = bin\sfml-window-d-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-window-d.a
   TARGET_PDB = sfml-window-d-2.dll.dbg
 
@@ -1360,16 +1416,16 @@ build _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/sfml-network
 
 
 #############################################
-# Link the shared library _deps\sfml-build\lib\sfml-network-d-2.dll
+# Link the shared library bin\sfml-network-d-2.dll
 
-build _deps/sfml-build/lib/sfml-network-d-2.dll _deps/sfml-build/lib/libsfml-network-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-network_Debug _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Win32/SocketImpl.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/sfml-network.rc.obj | _deps/sfml-build/lib/libsfml-system-d.a || _deps/sfml-build/lib/sfml-system-d-2.dll
+build bin/sfml-network-d-2.dll _deps/sfml-build/lib/libsfml-network-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-network_Debug _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Ftp.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Http.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/IpAddress.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Packet.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Socket.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/SocketSelector.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpListener.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/TcpSocket.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/UdpSocket.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/Win32/SocketImpl.cpp.obj _deps/sfml-build/src/SFML/Network/CMakeFiles/sfml-network.dir/sfml-network.rc.obj | _deps/sfml-build/lib/libsfml-system-d.a || bin/sfml-system-d-2.dll
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-system-d.a  -lws2_32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\Network\CMakeFiles\sfml-network.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = _deps\sfml-build\lib\sfml-network-d-2.dll
+  TARGET_FILE = bin\sfml-network-d-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-network-d.a
   TARGET_PDB = sfml-network-d-2.dll.dbg
 
@@ -1729,16 +1785,16 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graph
 
 
 #############################################
-# Link the shared library _deps\sfml-build\lib\sfml-graphics-d-2.dll
+# Link the shared library bin\sfml-graphics-d-2.dll
 
-build _deps/sfml-build/lib/sfml-graphics-d-2.dll _deps/sfml-build/lib/libsfml-graphics-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-graphics_Debug _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graphics.rc.obj | _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || _deps/sfml-build/lib/sfml-system-d-2.dll _deps/sfml-build/lib/sfml-window-d-2.dll
+build bin/sfml-graphics-d-2.dll _deps/sfml-build/lib/libsfml-graphics-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-graphics_Debug _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graphics.rc.obj | _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || bin/sfml-system-d-2.dll bin/sfml-window-d-2.dll
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-window-d.a  _deps/sfml-build/lib/libsfml-system-d.a  _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = _deps\sfml-build\lib\sfml-graphics-d-2.dll
+  TARGET_FILE = bin\sfml-graphics-d-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-graphics-d.a
   TARGET_PDB = sfml-graphics-d-2.dll.dbg
 
@@ -2026,16 +2082,16 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.ob
 
 
 #############################################
-# Link the shared library _deps\sfml-build\lib\sfml-audio-d-2.dll
+# Link the shared library bin\sfml-audio-d-2.dll
 
-build _deps/sfml-build/lib/sfml-audio-d-2.dll _deps/sfml-build/lib/libsfml-audio-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-audio_Debug _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.obj | _deps/sfml-build/lib/libsfml-system-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libopenal32.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisenc.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisfile.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbis.a _deps/sfml-src/extlibs/libs-mingw/x64/libogg.a _deps/sfml-src/extlibs/libs-mingw/x64/libFLAC.a || _deps/sfml-build/lib/sfml-system-d-2.dll
+build bin/sfml-audio-d-2.dll _deps/sfml-build/lib/libsfml-audio-d.a: CXX_SHARED_LIBRARY_LINKER__sfml-audio_Debug _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.obj | _deps/sfml-build/lib/libsfml-system-d.a _deps/sfml-src/extlibs/libs-mingw/x64/libopenal32.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisenc.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisfile.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbis.a _deps/sfml-src/extlibs/libs-mingw/x64/libogg.a _deps/sfml-src/extlibs/libs-mingw/x64/libFLAC.a || bin/sfml-system-d-2.dll
   LANGUAGE_COMPILE_FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-system-d.a  _deps/sfml-src/extlibs/libs-mingw/x64/libopenal32.a  _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisenc.a  _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisfile.a  _deps/sfml-src/extlibs/libs-mingw/x64/libvorbis.a  _deps/sfml-src/extlibs/libs-mingw/x64/libogg.a  _deps/sfml-src/extlibs/libs-mingw/x64/libFLAC.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_FILE = _deps\sfml-build\lib\sfml-audio-d-2.dll
+  TARGET_FILE = bin\sfml-audio-d-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-audio-d.a
   TARGET_PDB = sfml-audio-d-2.dll.dbg
 
@@ -2131,31 +2187,33 @@ build _deps/sfml-build/src/SFML/Audio/install/strip: phony _deps/sfml-build/src/
 # =============================================================================
 # Target aliases.
 
-build MagicianFest: phony MagicianFest.exe
+build MagicianFest: phony bin/MagicianFest.exe
+
+build MagicianFest.exe: phony bin/MagicianFest.exe
 
 build libsfml-main-d.a: phony _deps/sfml-build/lib/libsfml-main-d.a
 
-build sfml-audio: phony _deps/sfml-build/lib/sfml-audio-d-2.dll
+build sfml-audio: phony bin/sfml-audio-d-2.dll
 
-build sfml-audio-d-2.dll: phony _deps/sfml-build/lib/sfml-audio-d-2.dll
+build sfml-audio-d-2.dll: phony bin/sfml-audio-d-2.dll
 
-build sfml-graphics: phony _deps/sfml-build/lib/sfml-graphics-d-2.dll
+build sfml-graphics: phony bin/sfml-graphics-d-2.dll
 
-build sfml-graphics-d-2.dll: phony _deps/sfml-build/lib/sfml-graphics-d-2.dll
+build sfml-graphics-d-2.dll: phony bin/sfml-graphics-d-2.dll
 
 build sfml-main: phony _deps/sfml-build/lib/libsfml-main-d.a
 
-build sfml-network: phony _deps/sfml-build/lib/sfml-network-d-2.dll
+build sfml-network: phony bin/sfml-network-d-2.dll
 
-build sfml-network-d-2.dll: phony _deps/sfml-build/lib/sfml-network-d-2.dll
+build sfml-network-d-2.dll: phony bin/sfml-network-d-2.dll
 
-build sfml-system: phony _deps/sfml-build/lib/sfml-system-d-2.dll
+build sfml-system: phony bin/sfml-system-d-2.dll
 
-build sfml-system-d-2.dll: phony _deps/sfml-build/lib/sfml-system-d-2.dll
+build sfml-system-d-2.dll: phony bin/sfml-system-d-2.dll
 
-build sfml-window: phony _deps/sfml-build/lib/sfml-window-d-2.dll
+build sfml-window: phony bin/sfml-window-d-2.dll
 
-build sfml-window-d-2.dll: phony _deps/sfml-build/lib/sfml-window-d-2.dll
+build sfml-window-d-2.dll: phony bin/sfml-window-d-2.dll
 
 # =============================================================================
 # Folder targets.
@@ -2165,7 +2223,7 @@ build sfml-window-d-2.dll: phony _deps/sfml-build/lib/sfml-window-d-2.dll
 #############################################
 # Folder: D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug
 
-build all: phony MagicianFest.exe _deps/sfml-build/all
+build all: phony bin/MagicianFest.exe _deps/sfml-build/all
 
 # =============================================================================
 
@@ -2186,14 +2244,14 @@ build _deps/sfml-build/src/SFML/all: phony _deps/sfml-build/src/SFML/System/all 
 #############################################
 # Folder: D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/src/SFML/Audio
 
-build _deps/sfml-build/src/SFML/Audio/all: phony _deps/sfml-build/lib/sfml-audio-d-2.dll
+build _deps/sfml-build/src/SFML/Audio/all: phony bin/sfml-audio-d-2.dll
 
 # =============================================================================
 
 #############################################
 # Folder: D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/src/SFML/Graphics
 
-build _deps/sfml-build/src/SFML/Graphics/all: phony _deps/sfml-build/lib/sfml-graphics-d-2.dll
+build _deps/sfml-build/src/SFML/Graphics/all: phony bin/sfml-graphics-d-2.dll
 
 # =============================================================================
 
@@ -2207,21 +2265,21 @@ build _deps/sfml-build/src/SFML/Main/all: phony _deps/sfml-build/lib/libsfml-mai
 #############################################
 # Folder: D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/src/SFML/Network
 
-build _deps/sfml-build/src/SFML/Network/all: phony _deps/sfml-build/lib/sfml-network-d-2.dll
+build _deps/sfml-build/src/SFML/Network/all: phony bin/sfml-network-d-2.dll
 
 # =============================================================================
 
 #############################################
 # Folder: D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/src/SFML/System
 
-build _deps/sfml-build/src/SFML/System/all: phony _deps/sfml-build/lib/sfml-system-d-2.dll
+build _deps/sfml-build/src/SFML/System/all: phony bin/sfml-system-d-2.dll
 
 # =============================================================================
 
 #############################################
 # Folder: D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-build/src/SFML/Window
 
-build _deps/sfml-build/src/SFML/Window/all: phony _deps/sfml-build/lib/sfml-window-d-2.dll
+build _deps/sfml-build/src/SFML/Window/all: phony bin/sfml-window-d-2.dll
 
 # =============================================================================
 # Built-in targets

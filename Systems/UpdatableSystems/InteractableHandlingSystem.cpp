@@ -26,8 +26,8 @@ void removeToDelete(auto interactables){
         }
     }
 
-    for(auto& item: removedInteractable){
-        GameController::getInstance()->interactableHandler.remove(*item);
+    for(auto item: removedInteractable){
+        GameController::getInstance()->interactableHandler.remove(item);
     }
 }
 

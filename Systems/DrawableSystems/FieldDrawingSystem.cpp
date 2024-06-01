@@ -14,7 +14,7 @@ void FieldDrawingSystem::draw(sf::RenderWindow& window) const{
 //    window.draw(sprite);
 
     sf::Texture texture;
-    texture.loadFromFile("./../download.jpg");
+    texture.loadFromFile("../../download.jpg");
 
     sf::Sprite sprite;
     sprite.setTexture(texture);

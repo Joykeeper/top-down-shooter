@@ -7,13 +7,13 @@
 #include "../../GameController.h"
 #include "../../Utils.h"
 
-auto moveProjectiles(std::vector<Magicball*> projectiles, sf::Time dt) -> void;
-auto checkIfHit(std::vector<Magicball*> projectiles, sf::Time dt) -> void;
-auto checkIfDead(std::vector<Magicball*> projectiles, sf::Time dt) -> void;
+auto moveProjectiles(std::vector<std::unique_ptr<Magicball>>& projectiles, sf::Time dt) -> void;
+auto checkIfHit(std::vector<std::unique_ptr<Magicball>>& projectiles, sf::Time dt) -> void;
+auto checkIfDead(std::vector<std::unique_ptr<Magicball>>& projectiles, sf::Time dt) -> void;
 
 
 void ProjectileHandlingSystem::update(sf::Time dt) const {
-    auto projectiles = GameController::getInstance()->projectileHandler.getItems();
+    auto& projectiles = GameController::getInstance()->projectileHandler.getItems();
 
     moveProjectiles(projectiles, dt);
 
@@ -23,25 +23,22 @@ void ProjectileHandlingSystem::update(sf::Time dt) const {
 }
 
 
-auto moveProjectiles(std::vector<Magicball*> projectiles, sf::Time dt) -> void{
+auto moveProjectiles(std::vector<std::unique_ptr<Magicball>>& projectiles, sf::Time dt) -> void{
     for(auto& proj: projectiles){
         proj->move(proj->getDirection()*proj->getSpeed()*dt.asSeconds());
     }
 }
 
-auto checkIfHit(std::vector<Magicball*> projectiles, sf::Time dt) -> void{
+auto checkIfHit(std::vector<std::unique_ptr<Magicball>>& projectiles, sf::Time dt) -> void{
     auto removedProjectiles = std::vector<Magicball*>();
 
     for(auto& proj: projectiles){
         if (proj->getAllyOrEnemy() == AllyOrEnemy::ALLY){
             auto enemies = GameController::getInstance()->enemyHandler.getItems();
             for(auto& enemy: enemies){
-//                ( enemy->getPos().x <= proj->getPos().x and proj->getPos().x <= enemy->getPos().x + 75 and
-//                  enemy->getPos().y <= proj->getPos().y and proj->getPos().y <= enemy->getPos().y + 75)
                 if(Utils::objectsCollide(*proj, *enemy)){
                         enemy->setHealth(enemy->getHealth()-proj->getDamage());
-                        std::cout << enemy->getHealth() << "ehealth\n";
-                        removedProjectiles.push_back(proj);
+                        removedProjectiles.push_back(proj.get());
                         break;
                 }
             }
@@ -49,29 +46,31 @@ auto checkIfHit(std::vector<Magicball*> projectiles, sf::Time dt) -> void{
             auto player = &GameController::getInstance()->player;
             if( Utils::objectsCollide(*proj, *player)){
                 player->setHealth(player->getHealth()-proj->getDamage());
-                removedProjectiles.push_back(proj);
+                removedProjectiles.push_back(proj.get());
             }
         }
     }
 
-    for(auto& proj: removedProjectiles) {
-        GameController::getInstance()->projectileHandler.remove(*proj);
+    for(auto proj: removedProjectiles) {
+        GameController::getInstance()->projectileHandler.remove(proj);
     }
+
+    removedProjectiles.clear();
 }
 
-auto checkIfDead(std::vector<Magicball*> projectiles, sf::Time dt) -> void{
+auto checkIfDead(std::vector<std::unique_ptr<Magicball>>& projectiles, sf::Time dt) -> void{
     auto removedProjectiles = std::vector<Magicball*>();
-
-    projectiles = GameController::getInstance()->projectileHandler.getItems();
 
     for(auto& proj: projectiles){
         proj->setLifeTime(proj->getLifeTime()-dt.asSeconds());
         if(proj->getLifeTime() <= 0){
-            removedProjectiles.push_back(proj);
+            removedProjectiles.push_back(proj.get());
         }
     }
 
-    for(auto& proj: removedProjectiles) {
-        GameController::getInstance()->projectileHandler.remove(*proj);
+    for(auto proj: removedProjectiles) {
+        GameController::getInstance()->projectileHandler.remove(proj);
     }
+
+    removedProjectiles.clear();
 }

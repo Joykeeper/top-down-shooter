@@ -1,10 +1,14 @@
 #pragma once
 
-#include "../Magicball.h"
+#include "../GameObject.h"
+#include "../AllyOrEnemy.h"
+#include "memory"
+
+class Magicball;
 
 class Weapon : public GameObject{
-
-    float SHOOTING_COOLDOWN;
+protected:
+    float shootingCooldown;
 
     float timeFromLastShot_;
 
@@ -12,15 +16,15 @@ class Weapon : public GameObject{
 
 public:
     Weapon(sf::Vector2f pos, sf::Vector2f size, float shootCD, AllyOrEnemy allyOrEnemy):
-    GameObject(pos, size), SHOOTING_COOLDOWN(shootCD),
-    timeFromLastShot_(shootCD), allyOrEnemy_(allyOrEnemy) {};
+            GameObject(pos, size), shootingCooldown(shootCD),
+            timeFromLastShot_(shootCD), allyOrEnemy_(allyOrEnemy) {};
 
     float getShootingCooldown() const;
     void setShootingCooldown(float);
 
     float getTimeFromLastShot() const;
     void setTimeFromLastShot(float);
-    Magicball* shootProjectile(sf::Vector2f direction);
+    std::unique_ptr<Magicball> shootProjectile(sf::Vector2f direction);
 };
 
 
