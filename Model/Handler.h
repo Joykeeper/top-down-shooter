@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <memory>
+#include <iostream>
 
 
 template <typename T>
@@ -9,8 +10,8 @@ class Handler {
 public:
     Handler(){};
 
-    void add(T* elem) {
-        items.push_back(std::make_unique<T>(*elem));
+    void add(std::unique_ptr<T> elem) {
+        items.push_back(std::move(elem));
     }
 
     void addAll(std::vector<std::unique_ptr<T>> toInsert){
@@ -20,6 +21,7 @@ public:
     };
 
     void remove(T *elem) {
+        std::cout << items.size() << " size\n";
         auto it = std::find_if(items.begin(), items.end(),
                                [elem](const std::unique_ptr<T>& ptr) {
                                    return ptr.get() == elem;

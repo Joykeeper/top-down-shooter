@@ -31,6 +31,8 @@ public:
     int getHealth() const;
     Weapon& getWeapon();
 
+    AllyOrEnemy getAllyOrEnemy() const;
+
     bool hasWeapon();
     void setWeapon(std::unique_ptr<Weapon>);
     std::unique_ptr<Magicball> shoot(sf::Vector2f);
@@ -40,7 +42,7 @@ public:
 
     void addEffect(std::unique_ptr<Effect> effect);
     void removeEffect(const Effect& effect);
-    std::vector<std::unique_ptr<Effect>>& getEffects() ;
+    std::vector<std::unique_ptr<Effect>>& getEffects();
 
     void move(sf::Vector2f direction);
 };

@@ -6,12 +6,12 @@
 #include "../../GameController.h"
 
 void InteractableDrawingSystem::draw(sf::RenderWindow &window) const {
-    auto interactables = GameController::getInstance()->interactableHandler.getItems();
+    auto& interactables = GameController::getInstance()->interactableHandler.getItems();
 
 
     auto shape = sf::CircleShape();
 
-    for(auto interactable: interactables){
+    for(auto& interactable: interactables){
         shape = sf::CircleShape(interactable->getSize().x/2.f);
         shape.setFillColor(sf::Color::Cyan);
 

@@ -8,7 +8,7 @@
 void EnemyDrawingSystem::draw(sf::RenderWindow &window) const {
 
 
-    auto enemies = GameController::getInstance()->enemyHandler.getItems();
+    auto& enemies = GameController::getInstance()->enemyHandler.getItems();
 
     for(auto& enemy: enemies){
         sf::RectangleShape enemySprite(enemy->getSize());

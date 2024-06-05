@@ -13,14 +13,25 @@ void InputHandlingSystem::update(sf::Time deltaTime) const{
     Player& player = GameController::getInstance()->player;
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
-        if (player.getEffects().size() < 1){
+        if (player.getEffects().empty()){
             player.addEffect(std::make_unique<MoveSpeedEffect>(1000, 4));
         }
     }
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::T)){
-        if (player.getEffects().size() < 1){
-            player.addEffect(std::make_unique<AttackSpeedEffect>(0.15, 3));
+        if (player.getEffects().empty()){
+            player.addEffect(std::make_unique<AttackSpeedEffect>(0.2, 3));
         }
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Y)){
+        if (GameController::getInstance()->auraHandler.getItems().empty()){
+            GameController::getInstance()->auraHandler.add(std::make_unique<BurningAura>(
+                    GameController::getInstance()->getMousePos(),
+                                                  150, 3, 1, nullptr,
+                                                  AllyOrEnemy::ALLY, 2));
+
+        }
+
     }
 
     //movement
@@ -42,24 +53,24 @@ void InputHandlingSystem::update(sf::Time deltaTime) const{
     }
 
     auto playerWeapon = &GameController::getInstance()->player.getWeapon();
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Left) and GameController::getInstance()->player.hasWeapon()
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && GameController::getInstance()->player.hasWeapon()
         and playerWeapon->getTimeFromLastShot() >= playerWeapon->getShootingCooldown()){
 
         sf::Vector2f mousePos = GameController::getInstance()->getMousePos();
 
         sf::Vector2f projDir = Utils::normalizeVector(mousePos-playerWeapon->getPos()-sf::Vector2f(25, 25));
 
-        GameController::getInstance()->projectileHandler.add(GameController::getInstance()->player.shoot(projDir).get());
+        GameController::getInstance()->projectileHandler.add(GameController::getInstance()->player.shoot(projDir));
     }
 
     player.move(Utils::normalizeVector(velocity)*player.getMoveSpeed()*deltaTime.asSeconds());
 
 
     //enemy spawning
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) and GameController::getInstance()->enemyHandler.getItems().empty()){
-        auto enemy = new Enemy(sf::Vector2f(100,100));
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && GameController::getInstance()->enemyHandler.getItems().empty()){
+        auto enemy = std::make_unique<Enemy>(sf::Vector2f(100,100));
         enemy->setWeapon(std::make_unique<Pistol>(enemy->getPos(), AllyOrEnemy::ENEMY));
-        GameController::getInstance()->enemyHandler.add(enemy);
+        GameController::getInstance()->enemyHandler.add(std::move(enemy));
     }
 
 

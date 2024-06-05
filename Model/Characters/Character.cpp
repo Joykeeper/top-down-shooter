@@ -70,3 +70,7 @@ void Character::removeEffect(const Effect& effect) {
 std::vector<std::unique_ptr<Effect>>& Character::getEffects() {
     return this->effects;
 }
+
+AllyOrEnemy Character::getAllyOrEnemy() const {
+    return allyOrEnemy;
+}

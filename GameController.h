@@ -15,9 +15,8 @@
 #include "Systems/DrawableSystems/WeaponDrawingSystem.h"
 #include "Systems/UpdatableSystems/EnemyHandlingSystem.h"
 #include "Systems/UpdatableSystems/WeaponHandlingSystem.h"
-#include "Model/OldHandler.h"
 #include "Model/Handler.h"
-#include "Model/Room.h"
+#include "Model/MapObjects/Room.h"
 #include "Systems/UpdatableSystems/RoomHandlingSystem.h"
 #include "Systems/DrawableSystems/RoomDrawingSystem.h"
 #include "Model/Interactables/Interactable.h"
@@ -27,7 +26,13 @@
 #include "Systems/UpdatableSystems/EffectPuttingSystem.h"
 #include "Systems/UpdatableSystems/EffectRemovingSystem.h"
 #include "Model/Interactables/ShieldPotion.h"
-#include "Model/Level.h"
+#include "Model/MapObjects/Level.h"
+#include "Systems/UpdatableSystems/WallsCollisionSystem.h"
+#include "Model/Auras/Aura.h"
+#include "Systems/UpdatableSystems/AuraHandlingSystem.h"
+#include "Systems/DrawableSystems/AuraDrawingSystem.h"
+#include "Model/Auras/BurningAura.h"
+
 
 class GameController {
 public:
@@ -35,25 +40,28 @@ public:
 
     Player player;
 
-    OldHandler<Enemy> enemyHandler;
+    Handler<Enemy> enemyHandler;
     Handler<Magicball> projectileHandler;
-    OldHandler<Interactable> interactableHandler;
+    Handler<Interactable> interactableHandler;
+    Handler<Aura> auraHandler;
 
-    Room* activeRoom;
-    Level* currentLevel;
+    std::unique_ptr<Level> currentLevel;
 
     std::vector<DrawableSystem*> drawableSystems;
     std::vector<UpdatableSystem*> updatableSystems;
     sf::View* camera;
     sf::RenderWindow* window;
 
-    GameController(): activeRoom(new Room()) {
-        player.setWeapon(std::make_unique<Weapon>(player.getPos(), sf::Vector2f(10, 10),0, AllyOrEnemy::ALLY));
-        interactableHandler.add(new HealingSalve(sf::Vector2f(-100, -100), 2));
-        interactableHandler.add(new ShieldPotion(sf::Vector2f(-25, -100), 5));
-        interactableHandler.add(new ShieldPotion(sf::Vector2f(0, -100), 5));
+    GameController(): currentLevel(std::make_unique<Level>()) {
+        player.setWeapon(std::make_unique<Weapon>(player.getPos(), sf::Vector2f(10, 10),0.25, AllyOrEnemy::ALLY));
+        interactableHandler.add(std::make_unique<HealingSalve>(sf::Vector2f(-100, -100), 2));
+        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(-25, -100), 5));
+        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(0, -100), 5));
+
         this->addUpdatableSystem(new EffectPuttingSystem());
+        this->addUpdatableSystem(new AuraHandlingSystem());
         this->addUpdatableSystem(new InputHandlingSystem());
+        this->addUpdatableSystem(new WallsCollisionSystem());
         this->addUpdatableSystem(new RoomHandlingSystem());
         this->addUpdatableSystem(new InteractableHandlingSystem());
         this->addUpdatableSystem(new WeaponHandlingSystem());
@@ -64,7 +72,8 @@ public:
 
         this->addDrawableSystem(new CameraMovingSystem());
         this->addDrawableSystem(new FieldDrawingSystem());
-        //this->addDrawableSystem(new RoomDrawingSystem());
+        this->addDrawableSystem(new RoomDrawingSystem());
+        this->addDrawableSystem(new AuraDrawingSystem());
         this->addDrawableSystem(new PlayerDrawingSystem());
         this->addDrawableSystem(new EnemyDrawingSystem());
         this->addDrawableSystem(new WeaponDrawingSystem());
@@ -90,7 +99,7 @@ public:
     void addDrawableSystem(DrawableSystem*);
     void addUpdatableSystem(UpdatableSystem*);
 
-    std::vector<Character*> getCharacters() const;
+    std::vector<Character*> getCharacters();
 
     sf::Vector2f getMousePos() const;
 };

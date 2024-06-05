@@ -8,13 +8,13 @@
 #include "../../Utils.h"
 #include "cmath"
 
-auto checkHealth(auto enemies) -> void;
-auto shootAtPlayer(auto enemies) -> void;
-auto checkIfPlayerInRadius(auto enemies) -> void;
-auto moveEnemies(auto, sf::Time) -> void;
+auto checkHealth(auto& enemies) -> void;
+auto shootAtPlayer(auto& enemies) -> void;
+auto checkIfPlayerInRadius(auto& enemies) -> void;
+auto moveEnemies(auto&, sf::Time) -> void;
 
 void EnemyHandlingSystem::update(sf::Time dt) const {
-    auto enemies = GameController::getInstance()->enemyHandler.getItems();
+    auto& enemies = GameController::getInstance()->enemyHandler.getItems();
 
     checkHealth(enemies);
 
@@ -27,7 +27,7 @@ void EnemyHandlingSystem::update(sf::Time dt) const {
 
 }
 
-void moveEnemies(auto enemies, sf::Time dt){
+void moveEnemies(auto& enemies, sf::Time dt){
     sf::Vector2f playerPos = GameController::getInstance()->player.getPos();
     sf::Vector2f velocity;
     for(auto& enemy: enemies){
@@ -39,7 +39,7 @@ void moveEnemies(auto enemies, sf::Time dt){
     }
 }
 
-void checkHealth(auto enemies){
+void checkHealth(auto& enemies){
     auto removedEnemies = std::vector<Enemy*>();
 
     auto player = &GameController::getInstance()->player;
@@ -47,7 +47,7 @@ void checkHealth(auto enemies){
 
     for(auto& enemy: enemies){
         if(enemy->getHealth() <= 0){
-            removedEnemies.push_back(enemy);
+            removedEnemies.push_back(enemy.get());
         }
     }
 
@@ -56,20 +56,20 @@ void checkHealth(auto enemies){
     }
 }
 
-void shootAtPlayer(auto enemies){
+void shootAtPlayer(auto& enemies){
     auto playerPos = GameController::getInstance()->player.getPos();
     for(auto& enemy: enemies){
         if (enemy->hasWeapon() and enemy->isPlayerInRadius()) {
             if ((&enemy->getWeapon())->getTimeFromLastShot() >= (&enemy->getWeapon())->getShootingCooldown()) {
                 sf::Vector2f projDir = Utils::normalizeVector(playerPos - enemy->getPos() - sf::Vector2f(25, 25));
 
-                GameController::getInstance()->projectileHandler.add(enemy->shoot(projDir).get());
+                GameController::getInstance()->projectileHandler.add(enemy->shoot(projDir));
             }
         }
     }
 }
 
-void checkIfPlayerInRadius(auto enemies){
+void checkIfPlayerInRadius(auto& enemies){
     auto playerPos = GameController::getInstance()->player.getPos();
     for (auto& enemy: enemies){
         if (sqrt((playerPos.x - enemy->getPos().x)*(playerPos.x - enemy->getPos().x) +

@@ -54,9 +54,8 @@ add_executable(MagicianFest main.cpp
         Systems/DrawableSystems/WeaponDrawingSystem.cpp
         Systems/DrawableSystems/WeaponDrawingSystem.h
         Model/AllyOrEnemy.h
-        Model/OldHandler.h
-        Model/Room.cpp
-        Model/Room.h
+        Model/MapObjects/Room.cpp
+        Model/MapObjects/Room.h
         Systems/UpdatableSystems/RoomHandlingSystem.cpp
         Systems/UpdatableSystems/RoomHandlingSystem.h
         Systems/DrawableSystems/RoomDrawingSystem.cpp
@@ -86,11 +85,39 @@ add_executable(MagicianFest main.cpp
         Model/Effects/AttackSpeedEffect.h
         Model/Interactables/ShieldPotion.cpp
         Model/Interactables/ShieldPotion.h
-        Model/Level.h
-        Model/Level.cpp
+        Model/MapObjects/Level.h
+        Model/MapObjects/Level.cpp
         Model/Characters/CharacterState.cpp
         Model/Characters/CharacterState.h
         Model/Handler.h
+        Model/MapObjects/StaticObjects/Wall.cpp
+        Model/MapObjects/StaticObjects/Wall.h
+        Systems/UpdatableSystems/WallsCollisionSystem.cpp
+        Systems/UpdatableSystems/WallsCollisionSystem.h
+        Model/MapObjects/RoomConnector.cpp
+        Model/MapObjects/RoomConnector.h
+        Model/MapObjects/RoomConnections.cpp
+        Model/MapObjects/RoomConnections.h
+        Model/Characters/Enemies/Kamikadze.cpp
+        Model/Characters/Enemies/Kamikadze.h
+        Model/Characters/Enemies/Necromancer.cpp
+        Model/Characters/Enemies/Necromancer.h
+        Model/Characters/Behaviors/MovementBehaviors/MovementTowardsPlayer.cpp
+        Model/Characters/Behaviors/MovementBehaviors/MovementTowardsPlayer.h
+        Model/Characters/Behaviors/MovementBehaviors/MovementFromPlayer.cpp
+        Model/Characters/Behaviors/MovementBehaviors/MovementFromPlayer.h
+        Model/Characters/Behaviors/MovementBehaviors/RandomMovement.cpp
+        Model/Characters/Behaviors/MovementBehaviors/RandomMovement.h
+        Model/Characters/Behaviors/MovementBehaviors/PlayerControlledMovement.cpp
+        Model/Characters/Behaviors/MovementBehaviors/PlayerControlledMovement.h
+        Model/Auras/Aura.cpp
+        Model/Auras/Aura.h
+        Model/Auras/BurningAura.cpp
+        Model/Auras/BurningAura.h
+        Systems/UpdatableSystems/AuraHandlingSystem.cpp
+        Systems/UpdatableSystems/AuraHandlingSystem.h
+        Systems/DrawableSystems/AuraDrawingSystem.cpp
+        Systems/DrawableSystems/AuraDrawingSystem.h
 )
 
 target_link_libraries(MagicianFest sfml-graphics)

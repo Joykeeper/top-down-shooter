@@ -9,7 +9,7 @@
 void EffectPuttingSystem::update(sf::Time) const {
     auto characters = GameController::getInstance()->getCharacters();
 
-    for (auto& c: characters){
+    for (auto c: characters){
         auto effects = &c->getEffects();
         for (auto& effect: *effects){
             effect->effect(*c);

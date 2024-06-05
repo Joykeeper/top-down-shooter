@@ -17,11 +17,20 @@ void EffectRemovingSystem::update(sf::Time dt) const {
             effect->setTimeLeft(effect->getTimeLeft()-dt.asSeconds());
         }
     }
+
+    auto removedEffects = std::vector<Effect*>();
+
     for(Character* character: characters){
+        removedEffects = std::vector<Effect*>();
         for (auto &effect: character->getEffects()){
             if (effect->getTimeLeft() <= 0){
-                character->removeEffect(*effect);
+                removedEffects.push_back(effect.get());
             }
         }
+        for (auto effect: removedEffects){
+            character->removeEffect(*effect);
+        }
     }
+
+
 }

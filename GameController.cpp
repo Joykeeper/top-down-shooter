@@ -42,13 +42,19 @@ sf::Vector2f GameController::getMousePos() const {
     return worldPos;
 }
 
-std::vector<Character *> GameController::getCharacters() const {
+std::vector<Character *> GameController::getCharacters() {
     auto characters = std::vector<Character *>();
 
     characters.push_back((Character *)&this->player);
 
-    auto enemies = enemyHandler.getItems();
-    characters.insert(characters.end(), enemies.begin(), enemies.end());
+    auto& enemies = enemyHandler.getItems();
+
+    for (auto& enemy: enemies){
+        characters.push_back(enemy.get());
+
+    }
+
+    //characters.insert(characters.end(), enemies.begin(), enemies.end());
 
     return characters;
 }
