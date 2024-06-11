@@ -41,5 +41,13 @@ public:
 
         return (cornerDistance_sq <= (radius*radius));
     }
+
+    static bool isPointInRect(sf::Vector2f position, sf::Vector2f size, sf::Vector2f point){
+        if ((point.x <= position.x + size.x/2.f && point.x >= position.x - size.x/2.f) &&
+        (point.y <= position.y + size.y/2.f && point.y >= position.y - size.y/2.f)){
+            return true;
+        }
+        return false;
+    }
 };
 

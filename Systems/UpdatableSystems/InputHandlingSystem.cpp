@@ -4,6 +4,8 @@
 #include "../../Utils.h"
 #include "../../Model/Effects/MoveSpeedEffect.h"
 #include "../../Model/Effects/AttackSpeedEffect.h"
+#include "../../Model/Scenes/GameMenuScene.h"
+#include "../../Model/Scenes/GameScene.h"
 #include <cmath>
 #include <iostream>
 
@@ -11,6 +13,24 @@
 void InputHandlingSystem::update(sf::Time deltaTime) const{
     //skills
     Player& player = GameController::getInstance()->player;
+
+    if (player.getActiveSkill1()) player.getActiveSkill1()->updateTimeTillNext(deltaTime.asSeconds());
+    if (player.getActiveSkill2()) player.getActiveSkill2()->updateTimeTillNext(deltaTime.asSeconds());
+
+
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)){
+        if (player.getActiveSkill1() && player.getActiveSkill1()->getTimeTillNext() <= 0){
+            player.getActiveSkill1()->cast(GameController::getInstance()->getMousePos());
+            //player.addEffect(std::make_unique<MoveSpeedEffect>(1000, 4));
+        }
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)){
+        if (player.getActiveSkill2() && player.getActiveSkill2()->getTimeTillNext() <= 0){
+            player.getActiveSkill2()->cast(GameController::getInstance()->getMousePos());
+            //player.addEffect(std::make_unique<MoveSpeedEffect>(1000, 4));
+        }
+    }
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::R)){
         if (player.getEffects().empty()){
@@ -68,9 +88,12 @@ void InputHandlingSystem::update(sf::Time deltaTime) const{
 
     //enemy spawning
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::E) && GameController::getInstance()->enemyHandler.getItems().empty()){
-        auto enemy = std::make_unique<Enemy>(sf::Vector2f(100,100));
-        enemy->setWeapon(std::make_unique<Pistol>(enemy->getPos(), AllyOrEnemy::ENEMY));
+        auto enemy = std::make_unique<PistolEnemy>(sf::Vector2f(100,100));
         GameController::getInstance()->enemyHandler.add(std::move(enemy));
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+        GameController::getInstance()->sceneManager.changeScene(std::make_unique<GameMenuScene>());
     }
 
 

@@ -11,6 +11,7 @@ auto checkLifeTime(sf::Time dt) -> void ;
 void AuraHandlingSystem::update(sf::Time dt) const {
     auto& auras = GameController::getInstance()->auraHandler.getItems();
     auto characters = GameController::getInstance()->getCharacters();
+    auto& projectiles = GameController::getInstance()->projectileHandler.getItems();
 
     checkLifeTime(dt);
 
@@ -20,12 +21,23 @@ void AuraHandlingSystem::update(sf::Time dt) const {
                 if (Utils::objectInRadius(*character, aura->getRadius(), aura->getPosition())){
                     aura->applyEffect(*character);
                 }
-                aura->resetTimeTillNextEffect();
             }
+            for (auto& projectile: projectiles){
+                if (Utils::objectInRadius(*projectile, aura->getRadius(), aura->getPosition())){
+                    aura->applyProjectileEffect(*projectile);
+                }
+            }
+            aura->resetTimeTillNextEffect();
         } else {
             aura->setTimeTillNextEffect(aura->getTimeTillNextEffect()-dt.asSeconds());
         }
     }
+
+    for (auto& e : GameController::getInstance()->aurasToAdd.getItems()){
+        GameController::getInstance()->auraHandler.add(std::move(e));
+    }
+
+    GameController::getInstance()->aurasToAdd.clear();
 
 }
 
@@ -35,6 +47,7 @@ void checkLifeTime(sf::Time dt){
 
     for (auto& aura: auras){
         if (aura->getLifeTime() <= 0){
+            aura->actionOnEnd();
             removedAuras.push_back(aura.get());
         } else {
             aura->setLifeTime(aura->getLifeTime()-dt.asSeconds());

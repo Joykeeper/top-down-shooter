@@ -118,6 +118,51 @@ add_executable(MagicianFest main.cpp
         Systems/UpdatableSystems/AuraHandlingSystem.h
         Systems/DrawableSystems/AuraDrawingSystem.cpp
         Systems/DrawableSystems/AuraDrawingSystem.h
+        Model/Characters/Behaviors/MovementBehaviors/MovementBehavior.h
+        Model/Spells/Spell.cpp
+        Model/Spells/Spell.h
+        Model/Spells/BallSpell.cpp
+        Model/Spells/BallSpell.h
+        Model/Spells/Sunstrike.cpp
+        Model/Spells/Sunstrike.h
+        Systems/UpdatableSystems/SpellHandlingSystem.cpp
+        Systems/UpdatableSystems/SpellHandlingSystem.h
+        Model/Characters/Enemies/Sunstriker.cpp
+        Model/Characters/Enemies/Sunstriker.h
+        Model/Spells/AriseSpell.cpp
+        Model/Spells/AriseSpell.h
+        Model/UI/UIButton.cpp
+        Model/UI/UIButton.h
+        Systems/DrawableSystems/ButtonDrawingSystem.cpp
+        Systems/DrawableSystems/ButtonDrawingSystem.h
+        Systems/UpdatableSystems/ButtonHandlingSystem.cpp
+        Systems/UpdatableSystems/ButtonHandlingSystem.h
+        Model/UI/ButtonCommands/ButtonCommand.cpp
+        Model/UI/ButtonCommands/ButtonCommand.h
+        Model/UI/ButtonCommands/QuitCommand.cpp
+        Model/UI/ButtonCommands/QuitCommand.h
+        Model/Scenes/SceneManager.cpp
+        Model/Scenes/SceneManager.h
+        Model/Scenes/Scene.cpp
+        Model/Scenes/Scene.h
+        Model/Scenes/MenuScene.cpp
+        Model/Scenes/MenuScene.h
+        Model/Scenes/WeaponChoosingScene.cpp
+        Model/Scenes/WeaponChoosingScene.h
+        Model/UI/ButtonCommands/ChangeSceneCommand.cpp
+        Model/UI/ButtonCommands/ChangeSceneCommand.h
+        Model/Scenes/GameScene.cpp
+        Model/Scenes/GameScene.h
+        Systems/DrawableSystems/PlayerUIDrawingSystem.cpp
+        Systems/DrawableSystems/PlayerUIDrawingSystem.h
+        Model/Auras/WarningAura.cpp
+        Model/Auras/WarningAura.h
+        Model/Auras/ArisingAura.cpp
+        Model/Auras/ArisingAura.h
+        Model/Scenes/GameMenuScene.cpp
+        Model/Scenes/GameMenuScene.h
+        Systems/UpdatableSystems/SceneHandlingSystem.cpp
+        Systems/UpdatableSystems/SceneHandlingSystem.h
 )
 
 target_link_libraries(MagicianFest sfml-graphics)

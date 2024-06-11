@@ -1,18 +1,27 @@
 #pragma once
 
 #include "../Character.h"
+#include "../Behaviors/MovementBehaviors/MovementBehavior.h"
+#include "../Behaviors/MovementBehaviors/MovementTowardsPlayer.h"
+#include "../../Spells/Spell.h"
 
 class Enemy : public Character{
-
-    float shootingRadius;
-    bool playerInRadius;
-
+protected:
+    std::unique_ptr<MovementBehavior> movementBehavior;
+    float castingTime;
+    std::unique_ptr<Spell> spell;
 public:
-    Enemy(sf::Vector2f pos, float shootingRadius = 100, float moveSpeed = 10, std::unique_ptr<Weapon> weapon = nullptr) :
-            Character(pos, sf::Vector2f(80, 80), 5, moveSpeed, AllyOrEnemy::ENEMY, std::move(weapon)), shootingRadius(shootingRadius), playerInRadius(false){};
+    Enemy(sf::Vector2f pos, std::unique_ptr<Spell> spell, float moveSpeed = 50) :
+            Character(pos, sf::Vector2f(80, 80), 5, moveSpeed, AllyOrEnemy::ENEMY),
+            movementBehavior(std::make_unique<MovementTowardsPlayer>()),
+            spell(std::move(spell)){};
 
-    float getShootingRadius() const;
-    void setPlayerInRadius(bool);
-    bool isPlayerInRadius() const;
+    sf::Vector2f getNextMove();
+    virtual bool checkAttackConditions() = 0;
+
+    virtual void attack() = 0;
+
+    Spell& getSpell();
+
 };
 

@@ -7,9 +7,10 @@
 
 void GameController::runUpdatableSystems(sf::Time deltaTime) {
     for(auto system: this->updatableSystems) system->update(deltaTime);
+    std::cout << this->drawableSystems.size() << " -systems size\n";
     std::cout <<
     player.getShieldPoints() << " - shield, " << player.getHealth() << " - health\n";
-    std::cout << player.getWeapon().getTimeFromLastShot() << " - time from last shot";
+//    std::cout << player.getWeapon().getTimeFromLastShot() << " - time from last shot";
 }
 
 void GameController::runDrawableSystems(sf::RenderWindow& window) {

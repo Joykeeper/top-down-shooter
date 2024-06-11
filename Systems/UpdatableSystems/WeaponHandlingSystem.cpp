@@ -6,22 +6,10 @@
 #include "WeaponHandlingSystem.h"
 #include "../../GameController.h"
 
-auto updateWeapons(const std::vector<Character*>& characters, sf::Time dt) -> void;
-
 void WeaponHandlingSystem::update(sf::Time dt) const {
-    auto characters = GameController::getInstance()->getCharacters();
+    auto weapon = &GameController::getInstance()->player.getWeapon();
 
-    updateWeapons(characters, dt);
-}
-
-void updateWeapons(const std::vector<Character*>& characters, sf::Time dt){
-    for(auto character: characters){
-        if (character->hasWeapon()){
-            auto weapon = &character->getWeapon();
-
-            if (weapon->getTimeFromLastShot() < weapon->getShootingCooldown()){
-                weapon->setTimeFromLastShot(weapon->getTimeFromLastShot()+dt.asSeconds());
-            }
-        }
+    if (weapon->getTimeFromLastShot() < weapon->getShootingCooldown()){
+        weapon->setTimeFromLastShot(weapon->getTimeFromLastShot()+dt.asSeconds());
     }
 }

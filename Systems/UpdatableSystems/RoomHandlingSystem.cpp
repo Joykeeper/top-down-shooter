@@ -11,6 +11,8 @@ auto checkOnEnteringNewRoom () -> void;
 
 void RoomHandlingSystem::update(sf::Time) const {
     auto activeRoom = GameController::getInstance()->currentLevel->getActiveRoom();
+    auto& level = GameController::getInstance()->currentLevel;
+
 
     if(GameController::getInstance()->enemyHandler.getItems().empty() and !activeRoom->isFinished()){
         activeRoom->nextWave();
@@ -24,6 +26,15 @@ void RoomHandlingSystem::update(sf::Time) const {
     }
 
     checkOnEnteringNewRoom();
+
+
+    if (activeRoom->isFinished()){
+        std::cout << "finished \n";
+        level->openConnectors();
+    } else{
+        level->closeConnectors();
+    }
+
 }
 
 auto checkOnEnteringNewRoom () -> void {

@@ -14,6 +14,7 @@ int main() {
     auto gameController = GameController::getInstance();
     gameController->setCamera(view);
     gameController->setWindow(window);
+    gameController->start();
 
     while (window.isOpen())
     {

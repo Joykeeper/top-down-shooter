@@ -31,6 +31,10 @@ public:
         }
     };
 
+    void clear(){
+        items.clear();
+    }
+
     std::vector<std::unique_ptr<T>>& getItems() {
         return this->items;
     };

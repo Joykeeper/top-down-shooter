@@ -19,9 +19,7 @@ class Magicball : public GameObject{
 public:
     Magicball(sf::Vector2f startPos, sf::Vector2f dir, AllyOrEnemy type) :
             GameObject(startPos, {40, 40}),  speed(1000), lifeTime(3), direction(dir), damage(1),
-            allyOrEnemy(type){
-        this->addEffect(std::make_unique<AttackSpeedEffect>(0.3, 5));
-    };
+            allyOrEnemy(type){};
 
     sf::Vector2f getDirection();
     float getSpeed();

@@ -16,8 +16,8 @@ AllyOrEnemy Aura::getAllyOrEnemy() const {
     return allyOrEnemy;
 }
 
-Character *Aura::getCreator() {
-    return creator;
+Character& Aura::getCreator() {
+    return *creator;
 }
 
 float Aura::getCoolDown() const {
@@ -42,4 +42,8 @@ float Aura::getLifeTime() {
 
 void Aura::setLifeTime(float time) {
     lifeTime = time;
+}
+
+sf::Color Aura::getColor() const {
+    return color_;
 }

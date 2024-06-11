@@ -10,7 +10,7 @@ void AuraDrawingSystem::draw(sf::RenderWindow &window) const {
 
     for (auto& aura: auras){
         sf::CircleShape shape(aura->getRadius());
-        shape.setFillColor(sf::Color::White);
+        shape.setFillColor(aura->getColor());
         shape.setPosition(aura->getPosition()-sf::Vector2f(aura->getRadius(), aura->getRadius()));
         window.draw(shape);
     }

@@ -4,15 +4,11 @@
 
 #include "Enemy.h"
 
-float Enemy::getShootingRadius() const {
-    return this->shootingRadius;
+sf::Vector2f Enemy::getNextMove() {
+    return movementBehavior->nextMove(position_);
 }
 
-bool Enemy::isPlayerInRadius() const {
-    return playerInRadius;
-}
-
-void Enemy::setPlayerInRadius(bool b) {
-    this->playerInRadius = b;
+Spell &Enemy::getSpell() {
+    return *spell;
 }
 
