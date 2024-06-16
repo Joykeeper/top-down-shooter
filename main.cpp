@@ -6,9 +6,9 @@ int main() {
     sf::Clock deltaClock;
     sf::Time dt = deltaClock.getElapsedTime();
 
-    sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+    sf::RenderWindow window(sf::VideoMode(1600, 900), "My window");
 
-    sf::View view(sf::FloatRect(0, 0, 800.f, 600.f));
+    sf::View view(sf::FloatRect(0, 0, 1600.f, 900.f)); // 800*800
     window.setView(view);
 
     auto gameController = GameController::getInstance();

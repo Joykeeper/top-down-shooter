@@ -3,43 +3,20 @@
 #include "Model/Characters/Player.h"
 #include <vector>
 #include <memory>
-#include "Systems/UpdatableSystems/InputHandlingSystem.h"
-#include "Systems/DrawableSystems/PlayerDrawingSystem.h"
-#include "Systems/DrawableSystems/CameraMovingSystem.h"
-#include "Systems/DrawableSystems/FieldDrawingSystem.h"
+#include "Systems/UpdatableSystem.h"
+#include "Systems/DrawableSystem.h"
 #include "Model/Magicball.h"
-#include "Systems/DrawableSystems/ProjectileDrawingSystem.h"
-#include "Systems/UpdatableSystems/ProjectileHandlingSystem.h"
 #include "Model/Characters/Enemies/Enemy.h"
-#include "Systems/DrawableSystems/EnemyDrawingSystem.h"
-#include "Systems/DrawableSystems/WeaponDrawingSystem.h"
-#include "Systems/UpdatableSystems/EnemyHandlingSystem.h"
-#include "Systems/UpdatableSystems/WeaponHandlingSystem.h"
 #include "Model/Handler.h"
 #include "Model/MapObjects/Room.h"
-#include "Systems/UpdatableSystems/RoomHandlingSystem.h"
-#include "Systems/DrawableSystems/RoomDrawingSystem.h"
 #include "Model/Interactables/Interactable.h"
 #include "Model/Interactables/HealingSalve.h"
-#include "Systems/UpdatableSystems/InteractableHandlingSystem.h"
-#include "Systems/DrawableSystems/InteractableDrawingSystem.h"
-#include "Systems/UpdatableSystems/EffectPuttingSystem.h"
-#include "Systems/UpdatableSystems/EffectRemovingSystem.h"
 #include "Model/Interactables/ShieldPotion.h"
 #include "Model/MapObjects/Level.h"
-#include "Systems/UpdatableSystems/WallsCollisionSystem.h"
 #include "Model/Auras/Aura.h"
-#include "Systems/UpdatableSystems/AuraHandlingSystem.h"
-#include "Systems/DrawableSystems/AuraDrawingSystem.h"
-#include "Model/Auras/BurningAura.h"
-#include "Systems/UpdatableSystems/SpellHandlingSystem.h"
-#include "Model/Characters/Enemies/Sunstriker.h"
-#include "Model/Characters/Enemies/Necromancer.h"
 #include "Model/UI/UIButton.h"
-#include "Systems/UpdatableSystems/ButtonHandlingSystem.h"
-#include "Systems/DrawableSystems/ButtonDrawingSystem.h"
-#include "Model/UI/ButtonCommands/QuitCommand.h"
 #include "Model/Scenes/SceneManager.h"
+#include "Model/UI/UILabel.h"
 
 
 class GameController {
@@ -58,22 +35,26 @@ public:
     Handler<Aura> aurasToAdd;
 
     Handler<UIButton> buttonHandler;
+    Handler<UILabel> labelHandler;
 
     std::unique_ptr<Level> currentLevel;
 
     sf::Font standardFont;
 
-    //std::unique_ptr<Scene> sceneToSet;
     SceneManager sceneManager;
 
-    std::vector<DrawableSystem*> drawableSystems;
-    std::vector<UpdatableSystem*> updatableSystems;
+    std::vector<std::unique_ptr<DrawableSystem>> drawableSystems;
+    std::vector<std::unique_ptr<UpdatableSystem>> updatableSystems;
+
     sf::View* camera;
     sf::RenderWindow* window;
 
+    int unusedSkillPoints;
 
+    int levelsCompleted;
 
-    GameController(): currentLevel(std::make_unique<Level>()) {
+    GameController(): currentLevel(std::make_unique<Level>()), player(Player()), sceneManager(SceneManager()),
+    unusedSkillPoints(2), levelsCompleted(0){
 //        player.setWeapon(std::make_unique<Weapon>(player.getPos(), sf::Vector2f(10, 10),0.25, AllyOrEnemy::ALLY));
 //        interactableHandler.add(std::make_unique<HealingSalve>(sf::Vector2f(-100, -100), 2));
 //        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(-25, -100), 5));
@@ -127,8 +108,8 @@ public:
         standardFont.loadFromFile("assets/myfont.ttf");
         currentLevel->generateLevel(7);
 
-        player.setWeapon(std::make_unique<Weapon>(player.getPos(), sf::Vector2f(10, 10),0.25, AllyOrEnemy::ALLY));
         player.setPosition(currentLevel->getPlayerStartPoint());
+        //player.setPassiveSkill1(std::make_unique<AttackSpeedEffect>(0.2, 5, true));
 //        interactableHandler.add(std::make_unique<HealingSalve>(sf::Vector2f(-100, -100), 2));
 //        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(-25, -100), 5));
 //        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(0, -100), 5));
@@ -141,6 +122,27 @@ public:
 //        enemyHandler.add(std::make_unique<Necromancer>(sf::Vector2f(500, -100)));
 
         sceneManager.changeScene(std::make_unique<MenuScene>());
+    }
+
+    void resetGame(){
+        currentLevel = std::make_unique<Level>();
+
+        player.resetSelf();
+
+        unusedSkillPoints = 0;
+        levelsCompleted = 0;
+        enemyHandler.clear();
+        enemiesToAdd.clear();
+        projectileHandler.clear();
+        interactableHandler.clear();
+        auraHandler.clear();
+        aurasToAdd.clear();
+        buttonHandler.clear();
+        labelHandler.clear();
+
+        currentLevel->generateLevel(7);
+
+        player.setPosition(currentLevel->getPlayerStartPoint());
     }
 
     static GameController* getInstance(){
@@ -157,11 +159,11 @@ public:
     void runDrawableSystems(sf::RenderWindow&);
     void runUpdatableSystems(sf::Time);
 
-    void addDrawableSystem(DrawableSystem*);
-    void addUpdatableSystem(UpdatableSystem*);
+    void addDrawableSystem(std::unique_ptr<DrawableSystem>);
+    void addUpdatableSystem(std::unique_ptr<UpdatableSystem>);
 
     std::vector<Character*> getCharacters();
 
     sf::Vector2f getMousePos() const;
-};
 
+};

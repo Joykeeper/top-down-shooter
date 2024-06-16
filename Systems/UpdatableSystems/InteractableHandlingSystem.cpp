@@ -32,13 +32,12 @@ void removeToDelete(auto& interactables){
 }
 
 void checkInteraction(auto& interactables, auto characters){
+    auto& player = GameController::getInstance()->player;
     for(auto& interactable: *interactables){
-        for (auto& character: characters){
-            auto chPos = character->getPos();
-            auto intPos = interactable->getPos();
-            if (Utils::objectInRadius(*character, interactable->getInteractingRadius(), intPos)){
-                interactable->interact(*character);
-            }
+        auto chPos = player.getPos();
+        auto intPos = interactable->getPos();
+        if (Utils::objectInRadius(player, interactable->getInteractingRadius(), intPos)){
+            interactable->interact(player);
         }
     }
 }

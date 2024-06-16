@@ -5,7 +5,7 @@
 #include "MoveSpeedEffect.h"
 #include "../Characters/Character.h"
 
-void MoveSpeedEffect::effect(Character &c) {
+void MoveSpeedEffect::effect(Character &c, float dt) {
     this->Effect::effect(c);
     c.setMoveSpeed(c.getMoveSpeed() + moveSpeedBonus);
 }

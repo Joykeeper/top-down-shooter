@@ -6,10 +6,10 @@
 #include "../../GameController.h"
 
 void WeaponDrawingSystem::draw(sf::RenderWindow &window) const {
-    auto weapon = &GameController::getInstance()->player.getWeapon();
-    sf::RectangleShape weaponSprite(weapon->getSize());
-    auto weaponPos = weapon->getPos();
-    weaponSprite.setPosition(weaponPos - weapon->getSize()/2.f);
-    weaponSprite.setFillColor(sf::Color::Red);
-    window.draw(weaponSprite);
+//    auto weapon = &GameController::getInstance()->player.getWeapon();
+//    sf::RectangleShape weaponSprite(weapon->getSize());
+//    auto weaponPos = weapon->getPos();
+//    weaponSprite.setPosition(weaponPos - weapon->getSize()/2.f);
+//    weaponSprite.setFillColor(sf::Color::Red);
+//    window.draw(weaponSprite);
 }

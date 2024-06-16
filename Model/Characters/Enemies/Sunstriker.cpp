@@ -7,6 +7,7 @@
 #include "../../../Utils.h"
 
 void Sunstriker::attack() {
+    timeTillEndOfCast = CASTING_TIME;
     auto& player = GameController::getInstance()->player;
     spell->cast(player.getPos());
 }

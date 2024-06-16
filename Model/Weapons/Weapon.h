@@ -3,8 +3,11 @@
 #include "../GameObject.h"
 #include "../AllyOrEnemy.h"
 #include "memory"
+#include "WeaponType.h"
 
 class Magicball;
+class Effect;
+class Spell;
 
 class Weapon : public GameObject{
 protected:
@@ -25,6 +28,9 @@ public:
     float getTimeFromLastShot() const;
     void setTimeFromLastShot(float);
     std::unique_ptr<Magicball> shootProjectile(sf::Vector2f direction);
+
+    static std::vector<std::unique_ptr<Spell>> generateActiveSkills(int, WeaponType);
+    static std::vector<std::unique_ptr<Effect>> generatePassiveSkills(int, WeaponType);
 };
 
 

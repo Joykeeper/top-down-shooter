@@ -11,3 +11,7 @@ float Interactable::getInteractingRadius() const {
 bool Interactable::isToDelete() {
     return this->toDelete_;
 }
+
+sf::Color Interactable::getColor() {
+    return color;
+}

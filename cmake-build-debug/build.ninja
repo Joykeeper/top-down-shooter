@@ -546,6 +546,195 @@ build CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SceneHandlingSystem.c
   OBJECT_DIR = CMakeFiles\MagicianFest.dir
   OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems
 
+build CMakeFiles/MagicianFest.dir/Model/Spells/MSPDBuff.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Spells/MSPDBuff.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Spells\MSPDBuff.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Spells
+
+build CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/RangeHoldingMovement.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Characters/Behaviors/MovementBehaviors/RangeHoldingMovement.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Characters\Behaviors\MovementBehaviors\RangeHoldingMovement.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Characters\Behaviors\MovementBehaviors
+
+build CMakeFiles/MagicianFest.dir/Model/Interactables/GateToNextLevel.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Interactables/GateToNextLevel.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Interactables\GateToNextLevel.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Interactables
+
+build CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/LevelHandlingSystem.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Systems/UpdatableSystems/LevelHandlingSystem.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems\LevelHandlingSystem.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems
+
+build CMakeFiles/MagicianFest.dir/Model/Spells/ASPDBuff.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Spells/ASPDBuff.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Spells\ASPDBuff.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Spells
+
+build CMakeFiles/MagicianFest.dir/Model/Scenes/GameOverScene.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Scenes/GameOverScene.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Scenes\GameOverScene.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Scenes
+
+build CMakeFiles/MagicianFest.dir/Model/Scenes/SkillSelectionScene.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Scenes/SkillSelectionScene.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Scenes\SkillSelectionScene.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Scenes
+
+build CMakeFiles/MagicianFest.dir/Model/UI/UILabel.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/UI/UILabel.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\UI\UILabel.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\UI
+
+build CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/LabelDrawingSystem.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Systems/DrawableSystems/LabelDrawingSystem.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Systems\DrawableSystems\LabelDrawingSystem.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\DrawableSystems
+
+build CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/SetNewPassiveSkillCommand.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/UI/ButtonCommands/SetNewPassiveSkillCommand.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands\SetNewPassiveSkillCommand.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands
+
+build CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/SetNewActiveSkillCommand.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/UI/ButtonCommands/SetNewActiveSkillCommand.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands\SetNewActiveSkillCommand.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands
+
+build CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SkillPointsHandlingSystem.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Systems/UpdatableSystems/SkillPointsHandlingSystem.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems\SkillPointsHandlingSystem.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems
+
+build CMakeFiles/MagicianFest.dir/Model/Scenes/SkillReplacingScene.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Scenes/SkillReplacingScene.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Scenes\SkillReplacingScene.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Scenes
+
+build CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ReplaceSkillCommand.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/UI/ButtonCommands/ReplaceSkillCommand.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands\ReplaceSkillCommand.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands
+
+build CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/PlayerSkillHandlingSystem.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Systems/UpdatableSystems/PlayerSkillHandlingSystem.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems\PlayerSkillHandlingSystem.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Systems\UpdatableSystems
+
+build CMakeFiles/MagicianFest.dir/Model/Interactables/FastPotion.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Interactables/FastPotion.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Interactables\FastPotion.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Interactables
+
+build CMakeFiles/MagicianFest.dir/Model/Interactables/BerserkPotion.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Interactables/BerserkPotion.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Interactables\BerserkPotion.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Interactables
+
+build CMakeFiles/MagicianFest.dir/Model/Effects/BurningMagicBalls.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Effects/BurningMagicBalls.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Effects\BurningMagicBalls.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Effects
+
+build CMakeFiles/MagicianFest.dir/Model/Spells/BurningBallSpell.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Spells/BurningBallSpell.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Spells\BurningBallSpell.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Spells
+
+build CMakeFiles/MagicianFest.dir/Model/Effects/BurningEffect.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Effects/BurningEffect.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Effects\BurningEffect.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Effects
+
+build CMakeFiles/MagicianFest.dir/Model/Weapons/WeaponType.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Weapons/WeaponType.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Weapons\WeaponType.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Weapons
+
+build CMakeFiles/MagicianFest.dir/Model/Effects/WaterConcentration.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Effects/WaterConcentration.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Effects\WaterConcentration.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Effects
+
+build CMakeFiles/MagicianFest.dir/Model/Spells/PieceOfHell.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Spells/PieceOfHell.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Spells\PieceOfHell.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Spells
+
+build CMakeFiles/MagicianFest.dir/Model/Effects/TraceLeavingEffect.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Effects/TraceLeavingEffect.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Effects\TraceLeavingEffect.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Effects
+
+build CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/UpperNecromancer.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Characters/Enemies/UpperNecromancer.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Characters\Enemies\UpperNecromancer.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Characters\Enemies
+
+build CMakeFiles/MagicianFest.dir/Model/Spells/AdvancedAriseSpell.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/Spells/AdvancedAriseSpell.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\Spells\AdvancedAriseSpell.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\Spells
+
+build CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ChoosePlayerWeaponCommand.cpp.obj: CXX_COMPILER__MagicianFest_unscanned_Debug D$:/Learning/University/II$ semester/PJC/MagicianFest/Model/UI/ButtonCommands/ChoosePlayerWeaponCommand.cpp || cmake_object_order_depends_target_MagicianFest
+  DEP_FILE = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands\ChoosePlayerWeaponCommand.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-src/include"
+  OBJECT_DIR = CMakeFiles\MagicianFest.dir
+  OBJECT_FILE_DIR = CMakeFiles\MagicianFest.dir\Model\UI\ButtonCommands
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MagicianFest
@@ -554,7 +743,7 @@ build CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SceneHandlingSystem.c
 #############################################
 # Link the executable bin\MagicianFest.exe
 
-build bin/MagicianFest.exe: CXX_EXECUTABLE_LINKER__MagicianFest_Debug CMakeFiles/MagicianFest.dir/main.cpp.obj CMakeFiles/MagicianFest.dir/GameController.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Player.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InputHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/PlayerDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/CameraMovingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/FieldDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Magicball.cpp.obj CMakeFiles/MagicianFest.dir/Model/GameObject.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/ProjectileDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/ProjectileHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Enemy.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/EnemyDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EnemyHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Weapon.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Character.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/WeaponHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/WeaponDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/Room.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/RoomHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/RoomDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Pistol.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/PistolEnemy.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/Interactable.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InteractableHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/HealingSalve.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/InteractableDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/Effect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/MoveSpeedEffect.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectPuttingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectRemovingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/AttackSpeedEffect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/ShieldPotion.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/Level.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/CharacterState.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/StaticObjects/Wall.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/WallsCollisionSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/RoomConnector.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/RoomConnections.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Kamikadze.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Necromancer.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/MovementTowardsPlayer.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/MovementFromPlayer.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/RandomMovement.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/PlayerControlledMovement.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/Aura.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/BurningAura.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/AuraHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/AuraDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/Spell.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/BallSpell.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/Sunstrike.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SpellHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Sunstriker.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/AriseSpell.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/UIButton.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/ButtonDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/ButtonHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ButtonCommand.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/QuitCommand.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/SceneManager.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/Scene.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/MenuScene.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/WeaponChoosingScene.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ChangeSceneCommand.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/GameScene.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/PlayerUIDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/WarningAura.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/ArisingAura.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/GameMenuScene.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SceneHandlingSystem.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || bin/sfml-graphics-d-2.dll bin/sfml-system-d-2.dll bin/sfml-window-d-2.dll
+build bin/MagicianFest.exe: CXX_EXECUTABLE_LINKER__MagicianFest_Debug CMakeFiles/MagicianFest.dir/main.cpp.obj CMakeFiles/MagicianFest.dir/GameController.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Player.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InputHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/PlayerDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/CameraMovingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/FieldDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Magicball.cpp.obj CMakeFiles/MagicianFest.dir/Model/GameObject.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/ProjectileDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/ProjectileHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Enemy.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/EnemyDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EnemyHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Weapon.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Character.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/WeaponHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/WeaponDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/Room.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/RoomHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/RoomDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/Pistol.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/PistolEnemy.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/Interactable.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/InteractableHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/HealingSalve.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/InteractableDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/Effect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/MoveSpeedEffect.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectPuttingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/EffectRemovingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/AttackSpeedEffect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/ShieldPotion.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/Level.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/CharacterState.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/StaticObjects/Wall.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/WallsCollisionSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/RoomConnector.cpp.obj CMakeFiles/MagicianFest.dir/Model/MapObjects/RoomConnections.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Kamikadze.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Necromancer.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/MovementTowardsPlayer.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/MovementFromPlayer.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/RandomMovement.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/PlayerControlledMovement.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/Aura.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/BurningAura.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/AuraHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/AuraDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/Spell.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/BallSpell.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/Sunstrike.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SpellHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/Sunstriker.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/AriseSpell.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/UIButton.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/ButtonDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/ButtonHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ButtonCommand.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/QuitCommand.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/SceneManager.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/Scene.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/MenuScene.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/WeaponChoosingScene.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ChangeSceneCommand.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/GameScene.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/PlayerUIDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/WarningAura.cpp.obj CMakeFiles/MagicianFest.dir/Model/Auras/ArisingAura.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/GameMenuScene.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SceneHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/MSPDBuff.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Behaviors/MovementBehaviors/RangeHoldingMovement.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/GateToNextLevel.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/LevelHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/ASPDBuff.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/GameOverScene.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/SkillSelectionScene.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/UILabel.cpp.obj CMakeFiles/MagicianFest.dir/Systems/DrawableSystems/LabelDrawingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/SetNewPassiveSkillCommand.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/SetNewActiveSkillCommand.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/SkillPointsHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Scenes/SkillReplacingScene.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ReplaceSkillCommand.cpp.obj CMakeFiles/MagicianFest.dir/Systems/UpdatableSystems/PlayerSkillHandlingSystem.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/FastPotion.cpp.obj CMakeFiles/MagicianFest.dir/Model/Interactables/BerserkPotion.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/BurningMagicBalls.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/BurningBallSpell.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/BurningEffect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Weapons/WeaponType.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/WaterConcentration.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/PieceOfHell.cpp.obj CMakeFiles/MagicianFest.dir/Model/Effects/TraceLeavingEffect.cpp.obj CMakeFiles/MagicianFest.dir/Model/Characters/Enemies/UpperNecromancer.cpp.obj CMakeFiles/MagicianFest.dir/Model/Spells/AdvancedAriseSpell.cpp.obj CMakeFiles/MagicianFest.dir/Model/UI/ButtonCommands/ChoosePlayerWeaponCommand.cpp.obj | _deps/sfml-build/lib/libsfml-graphics-d.a _deps/sfml-build/lib/libsfml-window-d.a _deps/sfml-build/lib/libsfml-system-d.a || bin/sfml-graphics-d-2.dll bin/sfml-system-d-2.dll bin/sfml-window-d-2.dll
   FLAGS = -g
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics-d.a  _deps/sfml-build/lib/libsfml-window-d.a  _deps/sfml-build/lib/libsfml-system-d.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\MagicianFest.dir
@@ -563,6 +752,7 @@ build bin/MagicianFest.exe: CXX_EXECUTABLE_LINKER__MagicianFest_Debug CMakeFiles
   TARGET_FILE = bin\MagicianFest.exe
   TARGET_IMPLIB = libMagicianFest.dll.a
   TARGET_PDB = MagicianFest.exe.dbg
+  RSP_FILE = CMakeFiles\MagicianFest.rsp
 
 
 #############################################

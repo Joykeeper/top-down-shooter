@@ -16,36 +16,12 @@ class Level {
 
     sf::Vector2f playerStartPoint;
 
+    bool levelCompleted;
+
 public:
     static int LEVEL_SIZE;
     explicit Level(sf::Vector2f startPoint = sf::Vector2f (LEVEL_SIZE/2*(Room::ROOM_SIZE.x+RoomConnector::CONNECTOR_SIZE.x), LEVEL_SIZE/2*(Room::ROOM_SIZE.x+RoomConnector::CONNECTOR_SIZE.x))):
-    playerStartPoint(startPoint){
-//        for (auto i = 0; i < LEVEL_SIZE; i++){
-//            for (auto j = 0; j < LEVEL_SIZE; j++){
-//                roomLocs[{i,j}];// = nullptr;
-//            }
-//        }
-        //generateLevel(7);
-
-//        sf::Vector2f quoSize = sf::Vector2f (Room::ROOM_SIZE.x + RoomConnector::CONNECTOR_SIZE.x,
-//                                             Room::ROOM_SIZE.y + RoomConnector::CONNECTOR_SIZE.y);
-//
-//        roomLocs[{0, 0}] = std::make_unique<Room>(sf::Vector2f(RoomConnector::CONNECTOR_SIZE.x/2 + 0*quoSize.x, RoomConnector::CONNECTOR_SIZE.y/2 + 0*quoSize.y));
-//        roomLocs[{1, 0}] = std::make_unique<Room>(sf::Vector2f(RoomConnector::CONNECTOR_SIZE.x/2 +1*quoSize.x, RoomConnector::CONNECTOR_SIZE.y/2 + 0*quoSize.y));
-//        roomLocs[{2, 0}] = std::make_unique<Room>(sf::Vector2f(RoomConnector::CONNECTOR_SIZE.x/2 +2*quoSize.x, RoomConnector::CONNECTOR_SIZE.y/2 + 0*quoSize.y));
-//        roomLocs[{2, -1}] = std::make_unique<Room>(sf::Vector2f(RoomConnector::CONNECTOR_SIZE.x/2 +2*quoSize.x, RoomConnector::CONNECTOR_SIZE.y/2 + -1*quoSize.y));
-//        roomLocs[{3, -1}] = std::make_unique<Room>(sf::Vector2f(RoomConnector::CONNECTOR_SIZE.x/2 +3*quoSize.x, RoomConnector::CONNECTOR_SIZE.y/2 + -1*quoSize.y));
-//        activeRoom = roomLocs[{0,0}].get();
-//
-//        roomConnections.push_back({{0,0}, {1,0}});
-//        roomConnections.push_back({{1,0}, {2,0}});
-//        roomConnections.push_back({{2, 0}, {2,-1}});
-//        roomConnections.push_back({{2,-1}, {3,-1}});
-//
-//        for (auto [roomLoc1, roomLoc2]: roomConnections){
-//            roomConnectors.push_back(std::make_unique<RoomConnector>(roomLoc1, roomLoc2));
-//        }
-    }
+    playerStartPoint(startPoint), levelCompleted(false){};
 
     std::vector<Room*> getRooms();
     std::vector<std::unique_ptr<RoomConnector>>& getConnectors();
@@ -57,6 +33,9 @@ public:
     void generateLevel(int);
 
     void clearLevel();
+
+    bool isCompleted();
+    void setCompleted(bool);
 
     void openConnectors();
     void closeConnectors();

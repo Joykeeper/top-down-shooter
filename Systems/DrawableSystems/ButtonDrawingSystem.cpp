@@ -12,6 +12,8 @@ void ButtonDrawingSystem::draw(sf::RenderWindow &window) const {
         sf::RectangleShape rectangle(button->getSize());
         if (button->isSelected()){
             rectangle.setFillColor(button->getSelectedBg());
+            rectangle.setOutlineColor(sf::Color::Red);
+            rectangle.setOutlineThickness(5);
         } else{
             rectangle.setFillColor(button->getIdleBg());
         }
@@ -23,10 +25,11 @@ void ButtonDrawingSystem::draw(sf::RenderWindow &window) const {
         text.setFont(GameController::getInstance()->standardFont);
 
         text.setString(button->getText());
-        int textPixelLength =  text.findCharacterPos(button->getTextLength() - 1).x - text.findCharacterPos(0).x;//((button->getFontSize()+4)/2)*button->getTextLength();
-        text.setPosition(button->getPosition() - sf::Vector2f(textPixelLength/4+3, button->getFontSize()/2));
 
         text.setCharacterSize(button->getFontSize());
+
+        text.setPosition(sf::Vector2f(button->getPosition().x - text.getLocalBounds().width/2,button->getPosition().y -text.getLocalBounds().height/2));
+
 
         text.setFillColor(sf::Color::Red);
 

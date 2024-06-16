@@ -6,10 +6,17 @@
 #include "../../GameController.h"
 
 void SceneManager::changeScene(std::unique_ptr<Scene> scene) {
-    GameController::getInstance()->updatableSystems.clear();
-    GameController::getInstance()->drawableSystems.clear();
+    sceneToSet = std::move(scene);
+}
 
-    currentScene = std::move(scene);
+void SceneManager::setNewScene() {
+    if (sceneToSet){
+        currentScene = std::move(sceneToSet);
 
-    currentScene->start();
+        GameController::getInstance()->updatableSystems.clear();
+        GameController::getInstance()->drawableSystems.clear();
+
+        sceneToSet = nullptr;
+        currentScene->start();
+    }
 }

@@ -1,5 +1,8 @@
+#pragma once
+
 #include "SFML/Graphics.hpp"
 #include <cmath>
+#include <random>
 
 class Utils {
 public:
@@ -49,5 +52,14 @@ public:
         }
         return false;
     }
-};
 
+    static int generateNumberInRange(int begin, int end){
+        if (begin == end) return begin;
+        const int range_from = begin;
+        const int range_to = end-1;
+        std::random_device rand_dev;
+        std::mt19937 generator(rand_dev());
+        std::uniform_int_distribution<int> distr(range_from, range_to);
+        return distr(generator);
+    }
+};

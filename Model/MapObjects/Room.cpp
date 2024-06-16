@@ -5,8 +5,12 @@
 #include "Room.h"
 #include <iostream>
 #include "../Characters/Player.h"
+#include "../../GameController.h"
+#include "../../Utils.h"
+#include "../Interactables/GateToNextLevel.h"
+#include "../Characters/Enemies/UpperNecromancer.h"
 
-sf::Vector2f Room::ROOM_SIZE = sf::Vector2f (800, 800);
+sf::Vector2f Room::ROOM_SIZE = sf::Vector2f (1600, 1600);
 
 sf::Vector2f Room::getPos() {
     return this->position_;
@@ -21,7 +25,7 @@ int Room::getCurrentWave() const{
 }
 
 void Room::nextWave() {
-    if (this->currentWave_ >= this->waves_.size()-1){
+    if (this->currentWave_ == this->waves_.size()-1){
         this->finished = true;
     }else{
         this->currentWave_++;
@@ -84,23 +88,129 @@ void Room::updateWalls() {
     for (auto i = 0; i < ROOM_SIZE.x/40; i++){
         if( i > conStartPos && i < conStartPos + RoomConnector::CONNECTOR_SIZE.y/ 40 - 1){
             if (top){
-                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0)));
+                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
             }
             if (right){
-                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f(ROOM_SIZE.x-40, i * 40)));
+                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f(ROOM_SIZE.x-40, i * 40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
             }
             if (bottom){
-                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, ROOM_SIZE.y-40)));
+                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, ROOM_SIZE.y-40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
             }
             if (left){
-                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40)));
+                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
             }
         } else {
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f(ROOM_SIZE.x-40, i * 40)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, ROOM_SIZE.y-40)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f(ROOM_SIZE.x-40, i * 40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, ROOM_SIZE.y-40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
 
         }
     }
+}
+
+void Room::generateWaves(int difficultyLevel) {
+    waves_.clear();
+
+    auto roomSize = sf::Vector2f(ROOM_SIZE.x - 300, ROOM_SIZE.y - 300);
+
+    if (difficultyLevel == 0){
+        //no enemies
+    } else if (difficultyLevel == -1){
+        GameController::getInstance()->interactableHandler.add(std::make_unique<GateToNextLevel>(position_ + sf::Vector2f(ROOM_SIZE.x/2, ROOM_SIZE.y/2)));
+    }
+    else if (difficultyLevel == 1){
+        auto amountOfWaves = Utils::generateNumberInRange(1, 2);
+        for (auto i = 0; i < amountOfWaves; i++){
+
+            auto amountOfEnemies = Utils::generateNumberInRange(2, 5);
+
+            auto x = Utils::generateNumberInRange(0, roomSize.x);
+            auto y = Utils::generateNumberInRange(0, roomSize.y);
+
+            for (auto e = 0; e < amountOfEnemies; e++) {
+
+                std::unique_ptr<Enemy> enemy = std::make_unique<PistolEnemy>(position_ + sf::Vector2f(x, y) + sf::Vector2f(150, 150));
+
+                x = Utils::generateNumberInRange(0, roomSize.x);
+                y = Utils::generateNumberInRange(0, roomSize.y);
+
+                waves_[i].push_back(std::move(enemy));
+            }
+
+        }
+
+    } else if (difficultyLevel == 2){
+
+        auto amountOfWaves = Utils::generateNumberInRange(2, 4);
+
+        for (auto i = 0; i < amountOfWaves; i++){
+
+            auto amountOfEnemies = Utils::generateNumberInRange(2, 5);
+
+            auto x = Utils::generateNumberInRange(0, roomSize.x);
+            auto y = Utils::generateNumberInRange(0, roomSize.y);
+
+            for (auto e = 0; e < amountOfEnemies; e++) {
+
+                auto typeOfEnemy = Utils::generateNumberInRange(0, 2);
+                std::unique_ptr<Enemy> enemy;
+                if (typeOfEnemy == 0) {
+                    enemy = std::make_unique<PistolEnemy>(position_ + sf::Vector2f(x, y) + sf::Vector2f(150, 150));
+                } else if (typeOfEnemy == 1) {
+                    enemy = std::make_unique<Sunstriker>(position_ + sf::Vector2f(x, y) + sf::Vector2f(150, 150));
+                }
+
+                x = Utils::generateNumberInRange(0, roomSize.x);
+                y = Utils::generateNumberInRange(0, roomSize.y);
+
+                waves_[i].push_back(std::move(enemy));
+            }
+
+        }
+
+    } else if (difficultyLevel == 3){
+
+        auto amountOfWaves = Utils::generateNumberInRange(3, 4);
+
+
+        for (auto i = 0; i < amountOfWaves; i++){
+
+            auto amountOfEnemies = Utils::generateNumberInRange(2, 5);
+
+            auto x = Utils::generateNumberInRange(0, roomSize.x);
+            auto y = Utils::generateNumberInRange(0, roomSize.y);
+
+            for (auto e = 0; e < amountOfEnemies; e++) {
+
+                auto typeOfEnemy = Utils::generateNumberInRange(0, 3);
+                std::unique_ptr<Enemy> enemy;
+                if (typeOfEnemy == 0) {
+                    enemy = std::make_unique<PistolEnemy>(position_ + sf::Vector2f(x, y) + sf::Vector2f(150, 150));
+                } else if (typeOfEnemy == 1) {
+                    enemy = std::make_unique<Sunstriker>(position_ + sf::Vector2f(x, y) + sf::Vector2f(150, 150));
+                } else if (typeOfEnemy == 2) {
+                    enemy = std::make_unique<Necromancer>(position_ + sf::Vector2f(x, y) + sf::Vector2f(150, 150));
+                }
+
+                x = Utils::generateNumberInRange(0, roomSize.x);
+                y = Utils::generateNumberInRange(0, roomSize.y);
+
+                waves_[i].push_back(std::move(enemy));
+            }
+
+        }
+
+    } else if (difficultyLevel == 4){
+
+        auto enemy = std::make_unique<UpperNecromancer>(position_ + sf::Vector2f(ROOM_SIZE.x/2, ROOM_SIZE.y/2) );
+        waves_[0].push_back(std::move(enemy));
+    }
+
+
+
+}
+
+int Room::getNumber() const {
+    return numberInLevel;
 }

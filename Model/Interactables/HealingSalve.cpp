@@ -5,7 +5,7 @@
 #include "HealingSalve.h"
 #include <iostream>
 
-void HealingSalve::interact(Character &character) {
+void HealingSalve::interact(Player &character) {
     if (!false){ //check if the healed amount isn't bigger than max health
         character.setHealth(character.getHealth() + this->healAmount);
         this->toDelete_ = true;

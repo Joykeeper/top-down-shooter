@@ -1,14 +1,11 @@
-//
-// Created by Admin on 05.06.2024.
-//
+#pragma once
 
-#ifndef MAGICIANFEST_RANDOMMOVEMENT_H
-#define MAGICIANFEST_RANDOMMOVEMENT_H
+#include "MovementBehavior.h"
 
-
-class RandomMovement {
-
+class RandomMovement : public MovementBehavior{
+    sf::Vector2f selectedDir_;
+public:
+    RandomMovement(sf::Vector2f curPos): selectedDir_(curPos){};
+    sf::Vector2f nextMove(sf::Vector2f curPos) override;
 };
 
-
-#endif //MAGICIANFEST_RANDOMMOVEMENT_H

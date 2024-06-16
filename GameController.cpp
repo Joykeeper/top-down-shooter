@@ -6,25 +6,24 @@
 #include "GameController.h"
 
 void GameController::runUpdatableSystems(sf::Time deltaTime) {
-    for(auto system: this->updatableSystems) system->update(deltaTime);
-    std::cout << this->drawableSystems.size() << " -systems size\n";
-    std::cout <<
-    player.getShieldPoints() << " - shield, " << player.getHealth() << " - health\n";
-//    std::cout << player.getWeapon().getTimeFromLastShot() << " - time from last shot";
+    for(auto& system: this->updatableSystems) system->update(deltaTime);
+
+    sceneManager.setNewScene();
 }
 
 void GameController::runDrawableSystems(sf::RenderWindow& window) {
-    for(auto system: this->drawableSystems) system->draw(window);
+    for(auto& system: this->drawableSystems) system->draw(window);
 }
 
 GameController* GameController::instance = nullptr;
 
-void GameController::addDrawableSystem(DrawableSystem* system) {
-    this->drawableSystems.push_back(system);
+void GameController::addDrawableSystem(std::unique_ptr<DrawableSystem> system) {
+    this->drawableSystems.push_back(std::move(system));
 }
-void GameController::addUpdatableSystem(UpdatableSystem* system) {
-    this->updatableSystems.push_back(system);
+void GameController::addUpdatableSystem(std::unique_ptr<UpdatableSystem> system) {
+    this->updatableSystems.push_back(std::move(system));
 }
+
 
 void GameController::setCamera(sf::View& cam) {
 
@@ -54,8 +53,6 @@ std::vector<Character *> GameController::getCharacters() {
         characters.push_back(enemy.get());
 
     }
-
-    //characters.insert(characters.end(), enemies.begin(), enemies.end());
 
     return characters;
 }

@@ -1,14 +1,10 @@
-//
-// Created by Admin on 05.06.2024.
-//
+#pragma once
 
-#ifndef MAGICIANFEST_MOVEMENTFROMPLAYER_H
-#define MAGICIANFEST_MOVEMENTFROMPLAYER_H
+#include "MovementBehavior.h"
 
-
-class MovementFromPlayer {
-
+class MovementFromPlayer : public MovementBehavior{
+public:
+    sf::Vector2f nextMove(sf::Vector2f curPos) override;
 };
 
 
-#endif //MAGICIANFEST_MOVEMENTFROMPLAYER_H

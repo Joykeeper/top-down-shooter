@@ -29,7 +29,7 @@ void drawConnectors(sf::RenderWindow &window){
         for (auto& wall: connector->getWalls()) {
             sf::RectangleShape w(wall->getSize());
             w.setFillColor(sf::Color::Red);
-            w.setPosition(wall->getPos());
+            w.setPosition(wall->getPos()-sf::Vector2f (wall->getSize().x/2, wall->getSize().y/2) );
             window.draw(w);
         }
 
@@ -48,7 +48,7 @@ void drawRooms(sf::RenderWindow &window){
         for (auto& wall: room->getWalls()) {
             sf::RectangleShape w(wall->getSize());
             w.setFillColor(sf::Color::Red);
-            w.setPosition(wall->getPos());
+            w.setPosition(wall->getPos()-sf::Vector2f (wall->getSize().x/2, wall->getSize().y/2) );
             window.draw(w);
         }
 

@@ -14,7 +14,14 @@ void EffectRemovingSystem::update(sf::Time dt) const {
         for (auto &effect: character->getEffects()){
             effect->uneffect(*character);
 
-            effect->setTimeLeft(effect->getTimeLeft()-dt.asSeconds());
+//            if (effect->isPassive()){
+//                effect->setTimeLeft(effect->getEffectTime());
+//            } else{
+//                effect->setTimeLeft(effect->getTimeLeft()-dt.asSeconds());
+//            }
+            if (!effect->isPassive()){
+                 effect->setTimeLeft(effect->getTimeLeft()-dt.asSeconds());
+            }
         }
     }
 

@@ -23,3 +23,15 @@ void Effect::setTimeLeft(double time) {
 bool Effect::getEffecting() const {
     return effecting;
 }
+
+std::string Effect::getName() const {
+    return name;
+}
+
+bool Effect::isPassive() {
+    return passive_;
+}
+
+void Effect::setPassive(bool p) {
+    passive_ = p;
+}

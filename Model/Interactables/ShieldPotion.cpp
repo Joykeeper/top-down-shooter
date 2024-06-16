@@ -5,9 +5,8 @@
 #include "ShieldPotion.h"
 #include "../Characters/Player.h"
 
-void ShieldPotion::interact(Character &c) {
-    auto p = (Player*) &c;
-    p->setShieldPoints(shieldBonus);
+void ShieldPotion::interact(Player &c) {
+    c.setShieldPoints(c.getShieldPoints() + shieldBonus);
 
     this->toDelete_ = true;
 }

@@ -6,6 +6,8 @@
 #include "../../GameController.h"
 
 void BallSpell::cast(sf::Vector2f dir) {
+    if (timeTillNext > 0) return;
+
     timeTillNext = COOL_DOWN;
 
     auto magicball = std::make_unique<Magicball>(caster->getPos(), dir, caster->getAllyOrEnemy());

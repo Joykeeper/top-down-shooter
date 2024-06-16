@@ -5,7 +5,7 @@
 #include "RoomConnector.h"
 #include "Room.h"
 
-sf::Vector2f RoomConnector::CONNECTOR_SIZE = sf::Vector2f (400, 400);
+sf::Vector2f RoomConnector::CONNECTOR_SIZE = sf::Vector2f (240, 240);
 
 
 std::vector<std::unique_ptr<Wall>> &RoomConnector::getWalls() {
@@ -58,14 +58,14 @@ void RoomConnector::openConnector() {
 
     if (!vertical){
         for (auto i = 0; i < CONNECTOR_SIZE.x/40; i++){
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, CONNECTOR_SIZE.y-40)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, CONNECTOR_SIZE.y-40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
         }
     }
     else {
         for (auto i = 0; i < CONNECTOR_SIZE.y/40; i++){
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (CONNECTOR_SIZE.x-40, i*40)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (CONNECTOR_SIZE.x-40, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
         }
     }
 }
@@ -77,20 +77,20 @@ void RoomConnector::closeConnector() {
 
     if (!vertical){
         for (auto i = 0; i < CONNECTOR_SIZE.x/40; i++){
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, CONNECTOR_SIZE.y-40)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, CONNECTOR_SIZE.y-40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
 
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (CONNECTOR_SIZE.x-40, i*40)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (CONNECTOR_SIZE.x-40, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
         }
     }
     else {
         for (auto i = 0; i < CONNECTOR_SIZE.y/40; i++){
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, CONNECTOR_SIZE.y-40)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, CONNECTOR_SIZE.y-40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
 
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40)));
-            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (CONNECTOR_SIZE.x-40, i*40)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
+            walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (CONNECTOR_SIZE.x-40, i*40) + sf::Vector2f(Wall::WALL_SIZE.x/2, Wall::WALL_SIZE.y/2)));
         }
     }
 }

@@ -163,6 +163,62 @@ add_executable(MagicianFest main.cpp
         Model/Scenes/GameMenuScene.h
         Systems/UpdatableSystems/SceneHandlingSystem.cpp
         Systems/UpdatableSystems/SceneHandlingSystem.h
+        Model/Spells/MSPDBuff.cpp
+        Model/Spells/MSPDBuff.h
+        Model/Characters/Behaviors/MovementBehaviors/RangeHoldingMovement.cpp
+        Model/Characters/Behaviors/MovementBehaviors/RangeHoldingMovement.h
+        Model/Interactables/GateToNextLevel.cpp
+        Model/Interactables/GateToNextLevel.h
+        Systems/UpdatableSystems/LevelHandlingSystem.cpp
+        Systems/UpdatableSystems/LevelHandlingSystem.h
+        Model/Spells/ASPDBuff.cpp
+        Model/Spells/ASPDBuff.h
+        Model/Scenes/GameOverScene.cpp
+        Model/Scenes/GameOverScene.h
+        Model/Scenes/SkillSelectionScene.cpp
+        Model/Scenes/SkillSelectionScene.h
+        Model/UI/UILabel.cpp
+        Model/UI/UILabel.h
+        Systems/DrawableSystems/LabelDrawingSystem.cpp
+        Systems/DrawableSystems/LabelDrawingSystem.h
+        Model/UI/ButtonCommands/SetNewPassiveSkillCommand.cpp
+        Model/UI/ButtonCommands/SetNewPassiveSkillCommand.h
+        Model/UI/ButtonCommands/SetNewActiveSkillCommand.cpp
+        Model/UI/ButtonCommands/SetNewActiveSkillCommand.h
+        Systems/UpdatableSystems/SkillPointsHandlingSystem.cpp
+        Systems/UpdatableSystems/SkillPointsHandlingSystem.h
+        Model/Scenes/SkillReplacingScene.cpp
+        Model/Scenes/SkillReplacingScene.h
+        Model/UI/ButtonCommands/ReplaceSkillCommand.cpp
+        Model/UI/ButtonCommands/ReplaceSkillCommand.h
+        Systems/UpdatableSystems/PlayerSkillHandlingSystem.cpp
+        Systems/UpdatableSystems/PlayerSkillHandlingSystem.h
+        Model/Interactables/FastPotion.cpp
+        Model/Interactables/FastPotion.h
+        Model/Interactables/BerserkPotion.cpp
+        Model/Interactables/BerserkPotion.h
+        Model/Effects/BurningMagicBalls.cpp
+        Model/Effects/BurningMagicBalls.h
+        Model/Spells/BurningBallSpell.cpp
+        Model/Spells/BurningBallSpell.h
+        Model/Effects/BurningEffect.cpp
+        Model/Effects/BurningEffect.h
+        Model/Weapons/WeaponType.cpp
+        Model/Weapons/WeaponType.h
+        Model/Effects/WaterConcentration.cpp
+        Model/Effects/WaterConcentration.h
+        Model/Effects/WaterConcentration.cpp
+        Model/Effects/WaterConcentration.h
+        Model/Spells/PieceOfHell.cpp
+        Model/Spells/PieceOfHell.h
+        Model/Effects/TraceLeavingEffect.cpp
+        Model/Effects/TraceLeavingEffect.h
+        Model/Characters/Enemies/UpperNecromancer.cpp
+        Model/Characters/Enemies/UpperNecromancer.h
+        Model/Spells/AdvancedAriseSpell.cpp
+        Model/Spells/AdvancedAriseSpell.h
+        Model/UI/ButtonCommands/ChoosePlayerWeaponCommand.cpp
+        Model/UI/ButtonCommands/ChoosePlayerWeaponCommand.h
 )
 
 target_link_libraries(MagicianFest sfml-graphics)

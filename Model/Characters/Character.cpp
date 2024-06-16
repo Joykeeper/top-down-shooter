@@ -21,6 +21,8 @@ void Character::setMoveSpeed(float mS) {
 
 void Character::setHealth(int hP) {
     this->health_ = hP;
+    if (this->health_ < 0) this->health_ = 0;
+    if (this->health_ > MAX_HEALTH) this->health_ = MAX_HEALTH;
 }
 
 
@@ -51,4 +53,12 @@ std::vector<std::unique_ptr<Effect>>& Character::getEffects() {
 
 AllyOrEnemy Character::getAllyOrEnemy() const {
     return allyOrEnemy;
+}
+
+int Character::getMaxHealth() const {
+    return MAX_HEALTH;
+}
+
+void Character::setMaxHealth(int hp){
+    this->MAX_HEALTH = hp;
 }

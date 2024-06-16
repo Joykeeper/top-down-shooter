@@ -8,7 +8,7 @@
 
 void PistolEnemy::attack() {
     auto player = &GameController::getInstance()->player;
-    spell->cast(Utils::normalizeVector(player->getPos() - position_ - sf::Vector2f (player->getSize().x/2, player->getSize().y/2)));
+    spell->cast(Utils::normalizeVector(player->getPos() - position_ ));
 }
 
 bool PistolEnemy::checkAttackConditions() {

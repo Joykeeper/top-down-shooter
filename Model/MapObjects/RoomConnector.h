@@ -20,24 +20,10 @@ public:
     static sf::Vector2f CONNECTOR_SIZE;
     RoomConnector(std::pair<int, int> room1, std::pair<int, int> room2): connectionBetweenRooms({room1, room2}),
     closed_(false) {
-        auto vertical = room1.first - room2.first == 0;
 
         this->position_ = calculateConnectorPos(room1, room2);
 
         openConnector();
-//        if (!vertical){
-//            for (auto i = 0; i < CONNECTOR_SIZE.x/40; i++){
-//                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, 0)));
-//                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (i*40, CONNECTOR_SIZE.y-40)));
-//            }
-//        }
-//        else {
-//            for (auto i = 0; i < CONNECTOR_SIZE.x/40; i++){
-//                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (0, i*40)));
-//                walls_.push_back(std::make_unique<Wall>(position_ + sf::Vector2f (CONNECTOR_SIZE.x-40, i*40)));
-//            }
-//        }
-
 
     };
 

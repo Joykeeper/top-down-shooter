@@ -6,6 +6,7 @@
 #include "RoomHandlingSystem.h"
 #include "../../Model/MapObjects/Room.h"
 #include "../../GameController.h"
+#include "../../Model/Scenes/SkillSelectionScene.h"
 
 auto checkOnEnteringNewRoom () -> void;
 
@@ -29,7 +30,10 @@ void RoomHandlingSystem::update(sf::Time) const {
 
 
     if (activeRoom->isFinished()){
-        std::cout << "finished \n";
+//        if (GameController::getInstance()->unusedSkillPoints != 0){
+//            GameController::getInstance()->sceneManager.changeScene(std::make_unique<SkillSelectionScene>(Weapon::generateActiveSkills(2), Weapon::generatePassiveSkills(1)));
+//            GameController::getInstance()->unusedSkillPoints--;
+//        }
         level->openConnectors();
     } else{
         level->closeConnectors();

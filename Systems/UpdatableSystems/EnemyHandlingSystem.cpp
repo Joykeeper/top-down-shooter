@@ -9,18 +9,12 @@
 #include "cmath"
 
 auto checkHealth(auto& enemies) -> void;
-auto shootAtPlayer(auto& enemies) -> void;
-auto checkIfPlayerInRadius(auto& enemies) -> void;
 auto moveEnemies(auto&, sf::Time) -> void;
 
 void EnemyHandlingSystem::update(sf::Time dt) const {
     auto& enemies = GameController::getInstance()->enemyHandler.getItems();
 
     checkHealth(enemies);
-
-    //checkIfPlayerInRadius(enemies);
-
-    //shootAtPlayer(enemies);
 
     moveEnemies(enemies, dt);
 
@@ -37,8 +31,12 @@ void moveEnemies(auto& enemies, sf::Time dt){
     sf::Vector2f velocity;
     for(auto& enemy: enemies){
         if (!enemy->checkAttackConditions()) {
-            velocity = enemy->getNextMove();
-            enemy->move(velocity*enemy->getMoveSpeed()*dt.asSeconds());
+            if (enemy->getTimeTillEndOfCast() <= 0){
+                velocity = enemy->getNextMove();
+                enemy->move(velocity*enemy->getMoveSpeed()*dt.asSeconds());
+            } else{
+                enemy->updateTimeTillEndOfCast(dt.asSeconds());
+            }
         } else {
             enemy->attack();
         }
@@ -53,36 +51,14 @@ void checkHealth(auto& enemies){
 
     for(auto& enemy: enemies){
         if(enemy->getHealth() <= 0){
+            auto item = std::move(enemy->provideInteractableOnDeath());
+            if (item) GameController::getInstance()->interactableHandler.add(std::move(item));
             removedEnemies.push_back(enemy.get());
         }
     }
 
     for(auto enemy: removedEnemies) {
+        GameController::getInstance()->player.enemyKilled();
         GameController::getInstance()->enemyHandler.remove(enemy);
     }
 }
-
-//void shootAtPlayer(auto& enemies){
-//    auto playerPos = GameController::getInstance()->player.getPos();
-//    for(auto& enemy: enemies){
-//        if (enemy->hasWeapon() and enemy->isPlayerInRadius()) {
-//            if ((&enemy->getWeapon())->getTimeFromLastShot() >= (&enemy->getWeapon())->getShootingCooldown()) {
-//                sf::Vector2f projDir = Utils::normalizeVector(playerPos - enemy->getPos() - sf::Vector2f(25, 25));
-//
-//                GameController::getInstance()->projectileHandler.add(enemy->shoot(projDir));
-//            }
-//        }
-//    }
-//}
-
-//void checkIfPlayerInRadius(auto& enemies){
-//    auto playerPos = GameController::getInstance()->player.getPos();
-//    for (auto& enemy: enemies){
-//        if (sqrt((playerPos.x - enemy->getPos().x)*(playerPos.x - enemy->getPos().x) +
-//            (playerPos.y - enemy->getPos().y)*(playerPos.y - enemy->getPos().y)) <= enemy->getShootingRadius()){
-//                enemy->setPlayerInRadius(true);
-//        } else{
-//                enemy->setPlayerInRadius(false);
-//        }
-//    }
-//}

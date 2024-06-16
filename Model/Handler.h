@@ -21,7 +21,6 @@ public:
     };
 
     void remove(T *elem) {
-        std::cout << items.size() << " size\n";
         auto it = std::find_if(items.begin(), items.end(),
                                [elem](const std::unique_ptr<T>& ptr) {
                                    return ptr.get() == elem;

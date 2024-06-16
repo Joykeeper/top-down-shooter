@@ -3,3 +3,4 @@
 //
 
 #include "Wall.h"
+sf::Vector2f Wall::WALL_SIZE = sf::Vector2f (40, 40);

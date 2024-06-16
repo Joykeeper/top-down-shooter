@@ -3,7 +3,7 @@
 //
 
 #include "Level.h"
-#include <random>
+#include "../../Utils.h"
 
 int Level::LEVEL_SIZE = 7;
 
@@ -42,7 +42,7 @@ void Level::generateLevel(int roomCount) {
     auto availableDirs = std::vector<RoomConnections>();
 
     for (int i = 0; i < roomCount; i++) {
-        roomLocs[currentRoomLoc] = std::make_unique<Room>(currentRoomLoc);
+        roomLocs[currentRoomLoc] = std::make_unique<Room>(currentRoomLoc, i);
 
         if (!roomLocs[{currentRoomLoc.first + 1, currentRoomLoc.second + 0}] &&
             currentRoomLoc.first + 1 < LEVEL_SIZE){
@@ -65,12 +65,8 @@ void Level::generateLevel(int roomCount) {
 
         if (availableDirs.empty()) break;
 
-        const int range_from = 0;
-        const int range_to = availableDirs.size()-1;
-        std::random_device rand_dev;
-        std::mt19937 generator(rand_dev());
-        std::uniform_int_distribution<int> distr(range_from, range_to);
-        auto dir = distr(generator);
+
+        auto dir = Utils::generateNumberInRange(0, availableDirs.size());
 
         auto newRoomLoc = std::pair<int, int>();
 
@@ -141,6 +137,31 @@ void Level::generateLevel(int roomCount) {
         noWallSides.clear();
     }
 
+    auto i = 0;
+    auto filledRoomsSize = (float) getRooms().size();
+    for (auto& [loc, room]: roomLocs){
+        if (!room) continue;
+
+        auto percentage = ((float )(room->getNumber()+1)/filledRoomsSize)*100;
+
+        if (room->getNumber() == 0){
+            room->generateWaves(0);
+        }else if (room->getNumber() == filledRoomsSize - 1){
+            room->generateWaves(-1);
+        }
+        else if (room->getNumber() == filledRoomsSize - 2){
+            room->generateWaves(4);
+        } else if (70 <= percentage){
+            room->generateWaves(3);
+        } else if (40 <= percentage){
+            room->generateWaves(2);
+        } else{
+            room->generateWaves(1);
+        }
+        i++;
+
+    }
+
     activeRoom = roomLocs[{LEVEL_SIZE/2,LEVEL_SIZE/2}].get();
     playerStartPoint = activeRoom->getPos() + sf::Vector2f (Room::ROOM_SIZE.x/2, Room::ROOM_SIZE.y/2);
 }
@@ -151,16 +172,20 @@ sf::Vector2f Level::getPlayerStartPoint() const {
 
 void Level::openConnectors() {
     for (auto& connector: roomConnectors){
-        //if (connector->isClosed()){
-            connector->openConnector();
-        //}
+        connector->openConnector();
     }
 }
 
 void Level::closeConnectors() {
     for (auto& connector: roomConnectors){
-        //if (!connector->isClosed()){
             connector->closeConnector();
-        //}
     }
+}
+
+bool Level::isCompleted() {
+    return levelCompleted;
+}
+
+void Level::setCompleted(bool b) {
+    levelCompleted = b;
 }
