@@ -46,7 +46,6 @@ std::vector<std::unique_ptr<Spell>> Weapon::generateActiveSkills(int amount, Wea
     auto generatedSkills = std::vector<std::unique_ptr<Spell>>();
 
     if (weaponType == WeaponType::FIRE_STAFF){
-        std::cout << "fire\n";
         auto possibleSkills = std::vector<std::unique_ptr<Spell>>();
         possibleSkills.push_back(std::make_unique<ASPDBuff>(&player, 0.07));
         possibleSkills.push_back(std::make_unique<Sunstrike>(&player));
@@ -59,8 +58,6 @@ std::vector<std::unique_ptr<Spell>> Weapon::generateActiveSkills(int amount, Wea
         }
 
     } else if (weaponType == WeaponType::WATER_STAFF){
-        std::cout << "water\n";
-        std::cout << amount << "\n";
 
         auto possibleSkills = std::vector<std::unique_ptr<Spell>>();
         possibleSkills.push_back(std::make_unique<MSPDBuff>(&player, 1000));
@@ -89,7 +86,7 @@ std::vector<std::unique_ptr<Effect>> Weapon::generatePassiveSkills(int amount, W
         auto possibleSkills = std::vector<std::unique_ptr<Effect>>();
         possibleSkills.push_back(std::make_unique<TraceLeavingEffect>(50, 1, 0.3, 3));
         possibleSkills.push_back(std::make_unique<MoveSpeedEffect>(800, 5));
-        possibleSkills.push_back(std::make_unique<AttackSpeedEffect>(0.4, 3));
+        possibleSkills.push_back(std::make_unique<AttackSpeedEffect>(0.04, 3));
 
         for (auto i = 0; i < amount; i++){
             auto randomSkill = Utils::generateNumberInRange(0, possibleSkills.size());

@@ -39,7 +39,6 @@ void collisionCheck(Character* character, Wall* wall){
         if (abs(collisionVec.x) >= abs(collisionVec.y)) {
 
             if (collisionVec.x > 0) {
-                std::cout << "here\n";
                 moveVector = sf::Vector2f(
                         sf::Vector2f(wall->getPos().x + wall->getSize().x / 2 + character->getSize().x / 2,
                                      character->getPos().y));
@@ -60,7 +59,6 @@ void collisionCheck(Character* character, Wall* wall){
                                                        wall->getPos().y - wall->getSize().y / 2 -
                                                        character->getSize().y / 2));
             }
-            std::cout << moveVector.x << " - x" << moveVector.y << " - y, aamovevector\n";
         }
 
         character->move(moveVector - character->getPos());

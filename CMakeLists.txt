@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+
 include(FetchContent)
 
 FetchContent_Declare(
@@ -222,6 +223,7 @@ add_executable(MagicianFest main.cpp
 )
 
 target_link_libraries(MagicianFest sfml-graphics)
+#target_link_libraries(MagicianFest sfml-system-2 sfml-window-2 sfml-graphics-2 sfml-network-2 sfml-audio-2)
 
 
 

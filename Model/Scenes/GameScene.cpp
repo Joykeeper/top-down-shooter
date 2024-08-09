@@ -47,7 +47,6 @@ void GameScene::start() {
     GameController::getInstance()->addUpdatableSystem(std::make_unique<LevelHandlingSystem>());
 
     GameController::getInstance()->addDrawableSystem(std::make_unique<CameraMovingSystem>());
-    GameController::getInstance()->addDrawableSystem(std::make_unique<FieldDrawingSystem>());
     GameController::getInstance()->addDrawableSystem(std::make_unique<RoomDrawingSystem>());
     GameController::getInstance()->addDrawableSystem(std::make_unique<AuraDrawingSystem>());
     GameController::getInstance()->addDrawableSystem(std::make_unique<PlayerDrawingSystem>());

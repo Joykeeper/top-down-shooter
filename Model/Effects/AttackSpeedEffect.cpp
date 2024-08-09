@@ -12,7 +12,6 @@ void AttackSpeedEffect::effect(Character &c, float dt) {
     Effect::effect(c);
 
     if (typeid(c) == typeid(Player)){
-        std::cout << "here lol \n";
         auto& k = (Player&) c;
         k.getDefaultAttack()->setCoolDown(k.getDefaultAttack()->getCoolDown() - attackSpeedBonus);
     };

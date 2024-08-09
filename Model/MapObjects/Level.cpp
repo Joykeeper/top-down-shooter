@@ -61,8 +61,6 @@ void Level::generateLevel(int roomCount) {
             availableDirs.push_back(RoomConnections::BOTTOM);
         }
 
-        std::cout << availableDirs.size() << " -level availabledirs\n";
-
         if (availableDirs.empty()) break;
 
 

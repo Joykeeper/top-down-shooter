@@ -54,72 +54,13 @@ public:
     int levelsCompleted;
 
     GameController(): currentLevel(std::make_unique<Level>()), player(Player()), sceneManager(SceneManager()),
-    unusedSkillPoints(2), levelsCompleted(0){
-//        player.setWeapon(std::make_unique<Weapon>(player.getPos(), sf::Vector2f(10, 10),0.25, AllyOrEnemy::ALLY));
-//        interactableHandler.add(std::make_unique<HealingSalve>(sf::Vector2f(-100, -100), 2));
-//        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(-25, -100), 5));
-//        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(0, -100), 5));
-
-        //sceneManager.changeScene(std::make_unique<MenuScene>());
-
-        //enemyHandler.add(std::make_unique<Sunstriker>(sf::Vector2f(100, 100), 100));
-        //enemyHandler.add(std::make_unique<Sunstriker>(sf::Vector2f(-100, 100), 100));
-        //enemyHandler.add(std::make_unique<Sunstriker>(sf::Vector2f(100, -100), 100));
-
-        //enemyHandler.add(std::make_unique<Necromancer>(sf::Vector2f(500, -100)));
-        //enemyHandler.add(std::make_unique<Necromancer>(sf::Vector2f(500, -100)));
-
-//        buttonHandler.add(std::make_unique<UIButton>(sf::Vector2f(400, 200), std::string("New Game"),sf::Vector2f(100, 100)));
-//        buttonHandler.add(std::make_unique<UIButton>(sf::Vector2f(400, 310), std::string("Load Game"),sf::Vector2f(100, 100)));
-//        auto quitButton = std::make_unique<UIButton>(sf::Vector2f(400, 420), std::string("Quit"),sf::Vector2f(100, 100));
-//        quitButton->setCommand(std::make_unique<QuitCommand>());
-//        buttonHandler.add(std::move(quitButton));
-
-        //std::cout << standardFont.loadFromFile("/Inter.ttf") << " dasd";
-
-//        this->addUpdatableSystem(new ButtonHandlingSystem());
-//        this->addDrawableSystem(new ButtonDrawingSystem());
-//        this->addUpdatableSystem(new EffectPuttingSystem());
-//        this->addUpdatableSystem(new AuraHandlingSystem());
-//        this->addUpdatableSystem(new InputHandlingSystem());
-//        this->addUpdatableSystem(new WallsCollisionSystem());
-//        this->addUpdatableSystem(new RoomHandlingSystem());
-//        this->addUpdatableSystem(new InteractableHandlingSystem());
-//        this->addUpdatableSystem(new WeaponHandlingSystem());
-//        this->addUpdatableSystem(new EnemyHandlingSystem());
-//        this->addUpdatableSystem(new ProjectileHandlingSystem());
-//        this->addUpdatableSystem(new SpellHandlingSystem());
-//        this->addUpdatableSystem(new EffectRemovingSystem());
-//
-//
-//        this->addDrawableSystem(new CameraMovingSystem());
-//        this->addDrawableSystem(new FieldDrawingSystem());
-//        this->addDrawableSystem(new RoomDrawingSystem());
-//        this->addDrawableSystem(new AuraDrawingSystem());
-//        this->addDrawableSystem(new PlayerDrawingSystem());
-//        this->addDrawableSystem(new EnemyDrawingSystem());
-//        this->addDrawableSystem(new WeaponDrawingSystem());
-//        this->addDrawableSystem(new InteractableDrawingSystem());
-//
-//        this->addDrawableSystem(new ProjectileDrawingSystem());
-    };
+    unusedSkillPoints(1), levelsCompleted(0){};
 
     void start(){
         standardFont.loadFromFile("assets/myfont.ttf");
         currentLevel->generateLevel(7);
 
         player.setPosition(currentLevel->getPlayerStartPoint());
-        //player.setPassiveSkill1(std::make_unique<AttackSpeedEffect>(0.2, 5, true));
-//        interactableHandler.add(std::make_unique<HealingSalve>(sf::Vector2f(-100, -100), 2));
-//        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(-25, -100), 5));
-//        interactableHandler.add(std::make_unique<ShieldPotion>(sf::Vector2f(0, -100), 5));
-//
-//        enemyHandler.add(std::make_unique<Sunstriker>(sf::Vector2f(100, 100), 100));
-//        enemyHandler.add(std::make_unique<Sunstriker>(sf::Vector2f(-100, 100), 100));
-//        enemyHandler.add(std::make_unique<Sunstriker>(sf::Vector2f(100, -100), 100));
-//
-//        enemyHandler.add(std::make_unique<Necromancer>(sf::Vector2f(500, -100)));
-//        enemyHandler.add(std::make_unique<Necromancer>(sf::Vector2f(500, -100)));
 
         sceneManager.changeScene(std::make_unique<MenuScene>());
     }
@@ -129,7 +70,7 @@ public:
 
         player.resetSelf();
 
-        unusedSkillPoints = 0;
+        unusedSkillPoints = 1;
         levelsCompleted = 0;
         enemyHandler.clear();
         enemiesToAdd.clear();
