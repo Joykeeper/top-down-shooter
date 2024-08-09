@@ -33,4 +33,5 @@ Prerequisites:
 
 
 Gameplay video:
-[game_showcase.mp4](..%2Fgame_showcase.mp4)
+https://github.com/user-attachments/assets/c9de41f4-271f-4ba6-8b8e-82798d320ef4
+
