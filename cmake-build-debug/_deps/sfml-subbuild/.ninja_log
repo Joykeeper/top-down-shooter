@@ -1,37 +1,37 @@
 # ninja log v5
 1	122	7363614071558906	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	8c8a2b03f652c160
 1	122	7363614071558906	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	8c8a2b03f652c160
-180	252	7448509831821662	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
+221	347	7469172010125230	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
 122	8447	7363614154794947	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	d0eb7a7e9aedfaca
-1	180	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
-252	326	7448509832559679	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
+0	221	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
+347	445	7469172011102615	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
 122	8447	7363614154794947	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	d0eb7a7e9aedfaca
-1	180	0	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
-180	252	7448509831821662	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
-252	326	7448509832559679	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
-395	474	7448509834035740	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
-326	395	7448509833247840	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
-326	395	7448509833247840	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
-395	474	7448509834035740	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
-474	545	7448509834753827	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
-474	545	7448509834753827	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
-546	638	7448509835661399	CMakeFiles/sfml-populate-complete	ac9648ab09590c07
-546	638	7448509835661399	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07
-546	638	7448509835661399	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	ac9648ab09590c07
-546	638	7448509835661399	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07
-1	224	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
-1	224	0	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
-224	353	7448991512550825	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
-224	353	7448991512550825	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
-354	464	7448991513637919	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
-354	464	7448991513637919	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
-464	569	7448991514695095	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
-464	569	7448991514695095	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
-569	668	7448991515682457	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
-569	668	7448991515682457	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
-668	769	7448991516699737	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
-668	769	7448991516699737	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
-769	951	7448991518494930	CMakeFiles/sfml-populate-complete	ac9648ab09590c07
-769	951	7448991518494930	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07
-769	951	7448991518494930	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	ac9648ab09590c07
-769	951	7448991518494930	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07
+0	221	0	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
+221	347	7469172010125230	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
+347	445	7469172011102615	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
+543	638	7469172013027851	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
+445	542	7469172012070420	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
+445	542	7469172012070420	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
+543	638	7469172013027851	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
+639	736	7469172014005242	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
+639	736	7469172014005242	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
+736	911	7469172015760545	CMakeFiles/sfml-populate-complete	ac9648ab09590c07
+736	911	7469172015760545	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07
+736	911	7469172015760545	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	ac9648ab09590c07
+736	911	7469172015760545	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07
+1	363	0	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
+1	363	0	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	557b41d4ee7f32fe
+363	568	7469877265609352	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
+363	568	7469877265609352	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	8cc460ac6a878826
+568	758	7469877267444447	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
+568	758	7469877267444447	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	e48f203b570a13dd
+758	931	7469877269159855	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
+758	931	7469877269159855	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1d250affbe0d252d
+931	1142	7469877271304112	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
+931	1142	7469877271304112	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	325cc25af01e02ad
+1142	1380	7469877273607951	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
+1142	1380	7469877273607951	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	3d1314357da15c56
+1380	2715	7469877286832563	CMakeFiles/sfml-populate-complete	ac9648ab09590c07
+1380	2715	7469877286832563	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07
+1380	2715	7469877286832563	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/CMakeFiles/sfml-populate-complete	ac9648ab09590c07
+1380	2715	7469877286832563	D:/Learning/University/II semester/PJC/MagicianFest/cmake-build-debug/_deps/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	ac9648ab09590c07

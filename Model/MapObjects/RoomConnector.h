@@ -15,6 +15,9 @@ class RoomConnector{
 
     bool closed_;
 
+    sf::Texture floorTexture_;
+    sf::Sprite floorSprite_;
+
 
 public:
     static sf::Vector2f CONNECTOR_SIZE;
@@ -24,6 +27,15 @@ public:
         this->position_ = calculateConnectorPos(room1, room2);
 
         openConnector();
+
+        if (!floorTexture_.loadFromFile("assets/stone_floor_40.png"))
+        {
+            std::cout << "Couldn't load image";
+        }
+
+        floorSprite_.setTexture(this->floorTexture_);
+        floorSprite_.setTextureRect(sf::IntRect(0, 0, 40, 40));
+        floorSprite_.setScale(sf::Vector2f(6, 6));
 
     };
 
@@ -39,5 +51,7 @@ public:
     bool isClosed();
 
     std::pair<std::pair<int,int>, std::pair<int,int>> getConnectionLocs();
+
+    sf::Sprite& getFloorSprite();
 
 };

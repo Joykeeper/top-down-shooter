@@ -7,6 +7,7 @@
 #include "../Characters/Enemies/Necromancer.h"
 #include "../Characters/Enemies/Sunstriker.h"
 #include <map>
+#include <iostream>
 
 class Player;
 
@@ -22,6 +23,9 @@ class Room {
 
     std::vector<RoomConnections> roomConnections;
 
+    sf::Texture floorTexture_;
+    sf::Sprite floorSprite_;
+
 public:
     static sf::Vector2f ROOM_SIZE;
     Room(std::pair<int, int> pos, int number, sf::Vector2f size=ROOM_SIZE): size_(size), numberInLevel(number), currentWave_(-1),
@@ -30,7 +34,14 @@ public:
         this->position_ = calculateRoomPosition(pos);
 
         updateWalls();
+        if (!this->getFloorTexture().loadFromFile("assets/stone_floor_40.png"))
+        {
+            std::cout << "Couldn't load image";
+        }
 
+        floorSprite_.setTexture(this->getFloorTexture());
+        floorSprite_.setTextureRect(sf::IntRect(0, 0, 40, 40));
+        floorSprite_.setScale(sf::Vector2f(4, 4));
     }
 
     sf::Vector2f getPos();
@@ -57,5 +68,8 @@ public:
 
     static sf::Vector2f calculateRoomPosition(std::pair<int, int>);
 
+
+    sf::Texture& getFloorTexture();
+    sf::Sprite& getFloorSprite();
 };
 

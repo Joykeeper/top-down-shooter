@@ -214,3 +214,11 @@ void Room::generateWaves(int difficultyLevel) {
 int Room::getNumber() const {
     return numberInLevel;
 }
+
+sf::Texture &Room::getFloorTexture() {
+    return this->floorTexture_;
+}
+
+sf::Sprite &Room::getFloorSprite() {
+    return this->floorSprite_;
+}

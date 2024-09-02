@@ -18,12 +18,21 @@
 
 
 Player::Player(WeaponType weapon) : Character(sf::Vector2f(10, 10),
-                                                           sf::Vector2f(60, 60), 10, 300, AllyOrEnemy::ALLY),
+                                                           sf::Vector2f(64, 64), 10, 300, AllyOrEnemy::ALLY),
                                                  shieldPoints(10), levelBreakThroughLimits({{1,10},{2, 20}, {3,30}, {4,40}, {5,50}}),
                                                  enemyKillCount(0),
                                                  powerLevel(0), weaponType(weapon){
 
     defaultAttack = std::make_unique<BallSpell>(this);
+
+    if (!this->getTexture().loadFromFile("assets/NovicePyromancer.png"))
+    {
+        std::cout << "Couldn't load image";
+    }
+
+    this->getSprite().setTexture(this->getTexture());
+    this->getSprite().setTextureRect(sf::IntRect(0, 0, 16, 16));
+    this->getSprite().setScale(4, 4);
 }
 
 

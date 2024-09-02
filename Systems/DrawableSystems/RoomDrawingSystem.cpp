@@ -34,22 +34,43 @@ void drawConnectors(sf::RenderWindow &window){
         }
 
     }
+
+
+    for (auto& connector: connectors){
+        auto& floorSprite = connector->getFloorSprite();
+        auto connectorPos = connector->getPos();
+
+        floorSprite.setPosition(sf::Vector2f(connectorPos.x, connectorPos.y));
+        window.draw(floorSprite);
+
+        for (auto& wall: connector->getWalls()) {
+            auto& wallSprite = wall->getSprite();
+            wallSprite.setPosition(wall->getPos()-sf::Vector2f (wall->getSize().x/2, wall->getSize().y/2));
+            window.draw(wallSprite);
+        }
+
+    }
 }
 
 void drawRooms(sf::RenderWindow &window){
     auto rooms = GameController::getInstance()->currentLevel->getRooms();
 
     for (auto room: rooms){
-        sf::RectangleShape rectangle(room->getSize());
-        rectangle.setFillColor(sf::Color::Yellow);
-        rectangle.setPosition(room->getPos());
-        window.draw(rectangle);
+        auto roomPos = room->getPos();
+
+        auto& floorSprite = room->getFloorSprite();
+
+        for (auto i = 0; i < 10; ++i){
+            for (auto j = 0; j < 10; ++j){
+                floorSprite.setPosition(sf::Vector2f(roomPos.x+i*160, roomPos.y+j*160));
+                window.draw(floorSprite);
+            }
+        }
 
         for (auto& wall: room->getWalls()) {
-            sf::RectangleShape w(wall->getSize());
-            w.setFillColor(sf::Color::Red);
-            w.setPosition(wall->getPos()-sf::Vector2f (wall->getSize().x/2, wall->getSize().y/2) );
-            window.draw(w);
+            auto& wallSprite = wall->getSprite();
+            wallSprite.setPosition(wall->getPos()-sf::Vector2f (wall->getSize().x/2, wall->getSize().y/2));
+            window.draw(wallSprite);
         }
 
     }

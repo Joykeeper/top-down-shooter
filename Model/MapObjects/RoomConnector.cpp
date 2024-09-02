@@ -98,3 +98,7 @@ void RoomConnector::closeConnector() {
 bool RoomConnector::isClosed() {
     return closed_;
 }
+
+sf::Sprite &RoomConnector::getFloorSprite() {
+    return floorSprite_;
+}
