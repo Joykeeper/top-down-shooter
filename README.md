@@ -31,6 +31,15 @@ Prerequisites:
 - Pause: Esc
 - Acquire new skill: N
 
+Gallery:
+![img.png](show_case_images/img.png)
+![img_1.png](show_case_images/img_1.png)
+![img_2.png](show_case_images/img_2.png)
+![img_1.png](show_case_images/img_8.png)
+![img_4.png](show_case_images/img_4.png)
+![img_3.png](show_case_images/img_3.png)
+
+
 
 Gameplay video without graphics:
 https://github.com/user-attachments/assets/c9de41f4-271f-4ba6-8b8e-82798d320ef4
