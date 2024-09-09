@@ -32,6 +32,9 @@ Prerequisites:
 - Acquire new skill: N
 
 
-Gameplay video:
+Gameplay video without graphics:
 https://github.com/user-attachments/assets/c9de41f4-271f-4ba6-8b8e-82798d320ef4
+
+Gameplay video with graphics:
+https://github.com/user-attachments/assets/6988faa3-aafe-4829-b757-7f81fa1d7281
 
