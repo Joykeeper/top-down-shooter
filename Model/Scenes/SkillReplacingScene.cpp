@@ -29,7 +29,7 @@ void SkillReplacingScene::start() {
         skill1->setCommand(std::make_unique<ReplaceSkillCommand>(1, activeSkillToSet));
 
         auto skill2 = std::make_unique<UIButton>(sf::Vector2f(window->getSize().x/2 + 300, window->getSize().y/2 - 120), std::string(player.getActiveSkill2()->getName()), 32, sf::Vector2f(200, 200));
-        skill2->setCommand(std::make_unique<ReplaceSkillCommand>(1, activeSkillToSet));
+        skill2->setCommand(std::make_unique<ReplaceSkillCommand>(2, activeSkillToSet));
 
         buttonHandler.add(std::move(skill1));
         buttonHandler.add(std::move(skill2));
@@ -40,7 +40,7 @@ void SkillReplacingScene::start() {
         skill1 ->setCommand(std::make_unique<ReplaceSkillCommand>(1,nullptr, passiveSkillToSet));
 
         auto skill2 = std::make_unique<UIButton>(sf::Vector2f(window->getSize().x/2 + 300, window->getSize().y/2 - 120), std::string(player.getPassiveSkill2()->getName()), 32, sf::Vector2f(200, 200));
-        skill2 ->setCommand(std::make_unique<ReplaceSkillCommand>(1,nullptr, passiveSkillToSet));
+        skill2 ->setCommand(std::make_unique<ReplaceSkillCommand>(2,nullptr, passiveSkillToSet));
 
         buttonHandler.add(std::move(skill1));
         buttonHandler.add(std::move(skill2));

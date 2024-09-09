@@ -14,4 +14,11 @@ void ProjectileDrawingSystem::draw(sf::RenderWindow &window) const {
         shape.setPosition(proj->getPos()-proj->getSize()/2.f);
         window.draw(shape);
     }
+
+    for(auto& proj: projectiles){
+        auto projSprite= proj->getSprite();
+        projSprite.setPosition(proj->getPos() - proj->getSize()/2.f);
+
+        window.draw(projSprite);
+    }
 }

@@ -69,6 +69,12 @@ void InputHandlingSystem::update(sf::Time deltaTime) const{
     }
     player.getDefaultAttack()->updateTimeTillNext(deltaTime.asSeconds());
 
+    if (velocity.x == 0 and velocity.y == 0){
+        player.getAnimationHandler().setAnimation("stop");
+    } else{
+        player.getAnimationHandler().setAnimation("idle");
+    }
+
     player.move(Utils::normalizeVector(velocity)*player.getMoveSpeed()*deltaTime.asSeconds());
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){

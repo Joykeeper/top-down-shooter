@@ -36,6 +36,8 @@ void PlayerUIDrawingSystem::draw(sf::RenderWindow &window) const {
     drawEnemyKillPoints(window);
     drawInfoBar(window, sf::Vector2f (1300, 500));
 
+    auto& playerUi = GameController::getInstance()->playerUi;
+
 
     window.setView(mainView);
 }
@@ -84,7 +86,7 @@ void drawHealthAndShield(sf::RenderWindow& window, Player& player){
 
 void drawSkills(sf::RenderWindow &window, Player& player){
 
-    drawSkillToolBar(window, sf::Vector2f(55, 485));
+    drawSkillToolBar(window, sf::Vector2f(55, 445));
 
     drawSkill(window, player.getActiveSkill1(), sf::Vector2f(70, 500));
     drawSkill(window, player.getActiveSkill2(), sf::Vector2f(140, 500));
@@ -135,10 +137,21 @@ void drawSkill(sf::RenderWindow &window, Spell* skill, sf::Vector2f pos){
 };
 
 void drawSkillToolBar(sf::RenderWindow &window, sf::Vector2f pos){
-    sf::RectangleShape skillBar(sf::Vector2f(150, 80));
-    skillBar.setFillColor(sf::Color::White);
-    skillBar.setPosition(pos);
-    window.draw(skillBar);
+//    sf::RectangleShape skillBar(sf::Vector2f(150, 80));
+//    skillBar.setFillColor(sf::Color::White);
+//    skillBar.setPosition(pos);
+//    window.draw(skillBar);
+    auto& playerUi = GameController::getInstance()->playerUi;
+    auto skillToolbar = playerUi.activeSkillsBlock->getSprite();
+
+    window.draw(skillToolbar);
+
+    sf::Text text("Skills", GameController::getInstance()->standardFont, 24);
+    auto p = pos + sf::Vector2f(150/2, 15);
+    text.setPosition(sf::Vector2f(p.x - text.getLocalBounds().width/2, p.y - text.getLocalBounds().height/2));
+
+    text.setFillColor(sf::Color(0, 0, 160));
+    window.draw(text);
 }
 
 void drawEffects(sf::RenderWindow &window, Player& player){
@@ -188,10 +201,23 @@ void drawEffect(sf::RenderWindow &window, Effect* effect, sf::Vector2f pos){
 }
 
 void drawEffectToolBar(sf::RenderWindow &window, sf::Vector2f pos){
-    sf::RectangleShape effectBar(sf::Vector2f(240, 130));
-    effectBar.setFillColor(sf::Color::White);
-    effectBar.setPosition(pos);
-    window.draw(effectBar);
+//    sf::RectangleShape effectBar(sf::Vector2f(240, 130));
+//    effectBar.setFillColor(sf::Color::White);
+//    effectBar.setPosition(pos);
+//    window.draw(effectBar);
+
+
+
+    auto& playerUi = GameController::getInstance()->playerUi;
+    auto effectToolbar = playerUi.passiveSkillsBlock->getSprite();
+    window.draw(effectToolbar);
+
+    sf::Text text("Effects", GameController::getInstance()->standardFont, 24);
+    auto p = pos + sf::Vector2f(250/2, 15);
+    text.setPosition(sf::Vector2f(p.x - text.getLocalBounds().width/2, p.y - text.getLocalBounds().height/2));
+
+    text.setFillColor(sf::Color(0, 0, 160));
+    window.draw(text);
 };
 
 
@@ -255,6 +281,7 @@ void drawCompletedLevels(sf::RenderWindow &window, sf::Vector2f pos){
 }
 
 void drawInfoBar(sf::RenderWindow &window, sf::Vector2f pos){
+
     sf::RectangleShape infoBar(sf::Vector2f(250, 200));
     infoBar.setFillColor(sf::Color::White);
     infoBar.setOutlineColor(sf::Color::Black);
@@ -262,8 +289,14 @@ void drawInfoBar(sf::RenderWindow &window, sf::Vector2f pos){
     infoBar.setPosition(pos);
     window.draw(infoBar);
 
+    auto& playerUi = GameController::getInstance()->playerUi;
+    auto infoBlockSprite = playerUi.infoBlock->getSprite();
+
+    window.draw(infoBlockSprite);
+
+
     sf::Text text("Progress", GameController::getInstance()->standardFont, 24);
-    auto p = pos + sf::Vector2f(infoBar.getSize().x/2, 15);
+    auto p = pos + sf::Vector2f(250/2, 15);
     text.setPosition(sf::Vector2f(p.x - text.getLocalBounds().width/2, p.y - text.getLocalBounds().height/2));
 
     text.setFillColor(sf::Color(0, 0, 160));

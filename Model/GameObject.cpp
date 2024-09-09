@@ -23,3 +23,7 @@ sf::Texture& GameObject::getTexture() {
 sf::Sprite &GameObject::getSprite() {
     return this->sprite_;
 }
+
+AnimationHandler& GameObject::getAnimationHandler() {
+    return this->animationHandler;
+}

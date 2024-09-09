@@ -30,9 +30,32 @@ Player::Player(WeaponType weapon) : Character(sf::Vector2f(10, 10),
         std::cout << "Couldn't load image";
     }
 
-    this->getSprite().setTexture(this->getTexture());
-    this->getSprite().setTextureRect(sf::IntRect(0, 0, 16, 16));
-    this->getSprite().setScale(4, 4);
+    // setting up AnimationHandler
+    this->animationHandler = AnimationHandler(this->getTexture(), sf::Vector2i (16, 16),
+                                              sf::Vector2f (4, 4), 4);
+
+    // creating animations
+    this->animationHandler.createAnimation("idle", std::pair<sf::Vector2i,sf::Vector2i>(
+            sf::Vector2i(0,0),
+            sf::Vector2i(3, 0))
+            );
+    this->animationHandler.createAnimation("stop", std::pair<sf::Vector2i,sf::Vector2i>(
+            sf::Vector2i(0,0),
+            sf::Vector2i(0, 0))
+    );
+
+
+//    this->getSprite().setTexture(this->getTexture());
+//    //this->getSprite().setColor(sf::Color(255, 255, 255, 128));
+//    this->getSprite().setTextureRect(sf::IntRect(0, 0, 16, 16));
+//    this->getSprite().setScale(4, 4);
+
+//    this->animationHandler.setSpriteSheet(this->getTexture());
+//
+//    this->animationHandler.setSpriteSize(sf::Vector2i(16, 16));
+//    this->animationHandler.setSpriteScale(sf::Vector2f (4, 4));
+//    this->animationHandler.setLengthOfFrame(4);
+
 }
 
 
@@ -184,4 +207,6 @@ void Player::resetSelf() {
     setActiveSkill1(nullptr);
     setActiveSkill2(nullptr);
 }
+
+
 

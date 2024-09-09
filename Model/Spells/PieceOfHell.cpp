@@ -13,5 +13,7 @@ void PieceOfHell::cast(sf::Vector2f pos) {
     auto hell = std::make_unique<BurningAura>(pos, radius, auraTime, 0.3,
                                                    caster, caster->getAllyOrEnemy(), 1);
 
+    hell->getAnimationHandler().getCurrentSprite().setColor(sf::Color(255, 255, 255, 128));
+
     GameController::getInstance()->auraHandler.add(std::move(hell));
 }

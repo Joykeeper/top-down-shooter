@@ -15,6 +15,8 @@
 
 void MenuScene::start() {
 
+
+
     auto window = GameController::getInstance()->window;
 
     auto& buttonHandler = GameController::getInstance()->buttonHandler;
@@ -28,6 +30,17 @@ void MenuScene::start() {
 
 
     auto newGameButton = std::make_unique<UIButton>(sf::Vector2f(window->getSize().x/2, window->getSize().y/2 - 150), std::string("New game"), 24, sf::Vector2f(200, 100));
+//    newGameButton->getDefaultSprite().setTextureRect(sf::IntRect(
+//            0,
+//            0,
+//            96,
+//            64));
+//    newGameButton->getHoveredSprite().setTextureRect(sf::IntRect(
+//            0,
+//            64,
+//            96,
+//            64));
+
     newGameButton->setCommand(std::make_unique<ChangeSceneCommand>(std::make_unique<WeaponChoosingScene>()));
     buttonHandler.add(std::move(newGameButton));
 

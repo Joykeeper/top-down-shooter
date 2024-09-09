@@ -220,6 +220,12 @@ add_executable(MagicianFest main.cpp
         Model/Spells/AdvancedAriseSpell.h
         Model/UI/ButtonCommands/ChoosePlayerWeaponCommand.cpp
         Model/UI/ButtonCommands/ChoosePlayerWeaponCommand.h
+        Model/AnimationHandler.cpp
+        Model/AnimationHandler.h
+        Model/UI/PlayerUI.cpp
+        Model/UI/PlayerUI.h
+        Model/UI/UIComponent.cpp
+        Model/UI/UIComponent.h
 )
 
 target_link_libraries(MagicianFest sfml-graphics)

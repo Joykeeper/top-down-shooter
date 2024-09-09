@@ -17,6 +17,8 @@
 #include "Model/UI/UIButton.h"
 #include "Model/Scenes/SceneManager.h"
 #include "Model/UI/UILabel.h"
+#include "Model/UI/UIComponent.h"
+#include "Model/UI/PlayerUI.h"
 
 
 class GameController {
@@ -36,6 +38,8 @@ public:
 
     Handler<UIButton> buttonHandler;
     Handler<UILabel> labelHandler;
+
+    PlayerUI playerUi;
 
     std::unique_ptr<Level> currentLevel;
 

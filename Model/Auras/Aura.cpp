@@ -47,3 +47,7 @@ void Aura::setLifeTime(float time) {
 sf::Color Aura::getColor() const {
     return color_;
 }
+
+AnimationHandler &Aura::getAnimationHandler() {
+    return animationHandler;
+}

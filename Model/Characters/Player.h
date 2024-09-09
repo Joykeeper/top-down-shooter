@@ -1,6 +1,7 @@
 #pragma once
 #include "SFML/Graphics.hpp"
 #include "Character.h"
+#include "../AnimationHandler.h"
 
 class Spell;
 
@@ -21,8 +22,8 @@ class Player : public Character{
 
     WeaponType weaponType;
 
-
 public:
+
     Player(WeaponType weaponType = WeaponType::FIRE_STAFF);
 
     ~Player() override = default;
@@ -67,5 +68,6 @@ public:
     void levelUp();
 
     void resetSelf();
+
 };
 

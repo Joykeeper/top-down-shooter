@@ -20,20 +20,20 @@ void RoomDrawingSystem::draw(sf::RenderWindow &window) const {
 void drawConnectors(sf::RenderWindow &window){
     auto& connectors = GameController::getInstance()->currentLevel->getConnectors();
 
-    for (auto& connector: connectors){
-        sf::RectangleShape rectangle(connector->getSize());
-        rectangle.setFillColor(sf::Color::Magenta);
-        rectangle.setPosition(connector->getPos());
-        window.draw(rectangle);
-
-        for (auto& wall: connector->getWalls()) {
-            sf::RectangleShape w(wall->getSize());
-            w.setFillColor(sf::Color::Red);
-            w.setPosition(wall->getPos()-sf::Vector2f (wall->getSize().x/2, wall->getSize().y/2) );
-            window.draw(w);
-        }
-
-    }
+//    for (auto& connector: connectors){
+//        sf::RectangleShape rectangle(connector->getSize());
+//        rectangle.setFillColor(sf::Color::Magenta);
+//        rectangle.setPosition(connector->getPos());
+//        window.draw(rectangle);
+//
+//        for (auto& wall: connector->getWalls()) {
+//            sf::RectangleShape w(wall->getSize());
+//            w.setFillColor(sf::Color::Red);
+//            w.setPosition(wall->getPos()-sf::Vector2f (wall->getSize().x/2, wall->getSize().y/2) );
+//            window.draw(w);
+//        }
+//
+//    }
 
 
     for (auto& connector: connectors){

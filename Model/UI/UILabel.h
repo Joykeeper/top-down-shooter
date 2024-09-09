@@ -2,8 +2,9 @@
 
 #include <string>
 #include "SFML/Graphics.hpp"
+#include "UIComponent.h"
 
-class UILabel {
+class UILabel{
 
     sf::Vector2f position_;
 

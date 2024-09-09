@@ -48,3 +48,27 @@ int UIButton::getFontSize() const {
     return fontSize_;
 }
 
+sf::Texture &UIButton::getTexture() {
+    return texture_;
+}
+
+sf::Sprite &UIButton::getDefaultSprite() {
+    return defaultSprite_;
+}
+
+sf::Sprite &UIButton::getHoveredSprite() {
+    return hoveredSprite_;
+}
+
+void UIButton::setTexture(sf::Texture t) {
+    this->texture_ = t;
+}
+
+void UIButton::setDefaultSprite(sf::Sprite s) {
+    this->defaultSprite_ = s;
+}
+
+void UIButton::setHoveredSprite(sf::Sprite s) {
+    this->hoveredSprite_ = s;
+}
+

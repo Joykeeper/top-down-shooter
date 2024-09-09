@@ -62,6 +62,19 @@ Enemy::Enemy(sf::Vector2f pos, int health, std::unique_ptr<Spell> spell, float m
 
     chooseInteractableOnDeath();
 
+    this->animationHandler = AnimationHandler(sf::Texture(), sf::Vector2i (16, 16),
+                                              sf::Vector2f (5, 5), 4);
+
+    // creating animations
+    this->animationHandler.createAnimation("idle", std::pair<sf::Vector2i,sf::Vector2i>(
+            sf::Vector2i(0,0),
+            sf::Vector2i(3, 0))
+    );
+    this->animationHandler.createAnimation("cast", std::pair<sf::Vector2i,sf::Vector2i>(
+            sf::Vector2i(0,0),
+            sf::Vector2i(0, 0))
+    );
+
 }
 
 sf::Color Enemy::getColor() {

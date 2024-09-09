@@ -30,15 +30,21 @@ void moveEnemies(auto& enemies, sf::Time dt){
     sf::Vector2f playerPos = GameController::getInstance()->player.getPos();
     sf::Vector2f velocity;
     for(auto& enemy: enemies){
+        enemy->getAnimationHandler().setAnimation("idle");
+
         if (!enemy->checkAttackConditions()) {
             if (enemy->getTimeTillEndOfCast() <= 0){
                 velocity = enemy->getNextMove();
                 enemy->move(velocity*enemy->getMoveSpeed()*dt.asSeconds());
+                enemy->getAnimationHandler().setAnimation("idle");
+
             } else{
                 enemy->updateTimeTillEndOfCast(dt.asSeconds());
+                enemy->getAnimationHandler().setAnimation("cast");
             }
         } else {
             enemy->attack();
+            enemy->getAnimationHandler().setAnimation("cast");
         }
     }
 }
