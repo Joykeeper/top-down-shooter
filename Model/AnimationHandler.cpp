@@ -9,7 +9,6 @@
 
 sf::Sprite& AnimationHandler::getCurrentSprite() {
 
-    std::cout << this->spriteSheet.getSize().x << "\n";
     auto startOfSpan= this->animations[currentAnimation].first;
     auto rectLeft = startOfSpan.x + this->currentIndexOfSpriteInAnimation;
     this->currentSprite.setTexture(this->spriteSheet);

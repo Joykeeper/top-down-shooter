@@ -26,7 +26,7 @@ PlayerUI::PlayerUI() {
             );
 
     passiveSkillsBlock = std::make_unique<UIComponent>(
-            sf::Vector2f(20, 200), sf::Vector2f(240, 130),
+            sf::Vector2f(20, 160), sf::Vector2f(240, 170),
             sf::Vector2f(240.f/96, 130.f/64),infoTexture,
             sf::Vector2f(1, 1), sf::Vector2i(96, 64)
     );

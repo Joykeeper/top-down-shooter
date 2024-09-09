@@ -155,7 +155,7 @@ void drawSkillToolBar(sf::RenderWindow &window, sf::Vector2f pos){
 }
 
 void drawEffects(sf::RenderWindow &window, Player& player){
-    drawEffectToolBar(window, sf::Vector2f(20, 200));
+    drawEffectToolBar(window, sf::Vector2f(20, 160));
 
     int i = 0;
     for (auto& effect: player.getEffects()){

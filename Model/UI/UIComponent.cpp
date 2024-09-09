@@ -37,7 +37,6 @@ sf::Vector2f UIComponent::getSize() {
 
 sf::Sprite& UIComponent::getSprite() {
     sprite_.setTexture(this->texture_);
-    std::cout << spriteSize_.x << " " << spriteSize_.y << "\n";
     sprite_.setTextureRect(sf::IntRect (spritesPositionInTexture_.x*spriteSize_.x,
                                         spritesPositionInTexture_.y*spriteSize_.y,
                                         spriteSize_.x,
